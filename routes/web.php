@@ -18,14 +18,14 @@ Route::get('/','HomeController@index');
 /* rota produto */
 Route::get('produto', 'ProdutoController@index');
 
-/*Rotas para criação de usuários*/
-Route::get('/addclient', 'ClientController@create');
-Route::post('/addclient', 'ClientController@store');
+/*Rotas para cadastro de clientes*/
+Route::get('/cadastroclient', 'CadastroController@cadastro');
+//Route::post('/cadastroclient', 'CadastroController@store');
 
 /*rotas de login*/
 
-route::get('/loginClient', 'AuthController@LoginClient')->name('login');
-route::get('/admin', 'AuthController@administracao')->name('admin');
+route::get('/loginclient', 'AuthController@loginClient');
+route::get('/admin', 'AuthController@administracao');
 
 /*rota carrinho */ 
 Route::get('/carrinho', 'CarrinhoController@mostrarCarrinho');
