@@ -1,4 +1,14 @@
+body {
+    font-family: 'Philosopher', sans-serif;
+    overflow-x: hidden;
+}
 
+
+.title {
+    font-family: 'Playfair Display', serif;
+
+    color: white;
+}
 
 
 #icones-nav a,

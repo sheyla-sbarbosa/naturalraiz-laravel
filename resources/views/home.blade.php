@@ -64,8 +64,7 @@
                             <h4 class="card-title text-success">Pimenta</h4>
                             <h6 class="card-subtitle mb-4 text-muted">Roça do Zé</h6>
                             <h5 class="card-subtitle mb-4 text-success">R$ 2,50 un</h5>
-                            <img class="btn btn-default"
-                                src="https://img.icons8.com/ios/40/000000/shopping-cart-with-money.png">
+                            <img class="btn btn-default" src="https://img.icons8.com/ios/40/000000/shopping-cart-with-money.png">
                             <img class="btn btn-default" src="https://img.icons8.com/ios/20/000000/plus.png">
                             <img class="btn btn-default" src="https://img.icons8.com/ios/20/000000/minus.png">
                             <img class="btn btn-default" src="https://img.icons8.com/ios/40/000000/like.png">

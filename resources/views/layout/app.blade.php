@@ -13,14 +13,29 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
 
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="stylesheet" href="css/produto2.css">
+    <link rel="stylesheet" href="css/produtos1.css">
+    
+    
+    
+    
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT&family=Philosopher&family=Playfair+Display:ital,wght@0,400;1,500&display=swap" rel="stylesheet">
+
     <title> Natural Raíz </title>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(30, 172, 60);">
         <a class="navbar-brand" href="#">
-            <img src="img/logomarca.png" width="30" height="30" class="d-inline-block align-top" alt="">
-            <strong style="color: white;">Natural Raiz</strong></a>
+            <img src="img/logomarca.png" width="30" height="30" class="d-inline-block align-top" alt=""> 
+            <span class=" title">
+                NATURAL RAÍZ
+            </span>
+        </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
             aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
@@ -71,11 +86,19 @@
 
             </ul>
 
-            <div id="login">
-                <a href="login.html" style="color: white;" ><i class="fas fa-sign-in-alt"></i> Entrar</a>
-                <a href="#" style="color: white;" ><i class="fas fa-cart-plus display-5"></i> Comprar</a>
-                <a href="#"style="color: white;" ><i class="fas fa-heart"></i> Favoritos</a>
-            </div>
+            
+                <label class="btn btn-default" style="color:white;">
+                    <img src="https://img.icons8.com/ios/30/ffffff/add-shopping-cart.png"/> Comprar                  
+                </label>
+                
+                <label class="btn btn-default" style="color:white;">
+                    <img src="https://img.icons8.com/ios/30/ffffff/hearts.png"/> Favoritos
+                </label>
+                <label class="btn btn-default" style="color:white;">
+                    <img src="https://img.icons8.com/ios/30/ffffff/login-rounded-right.png"/> Entrar
+                </label> 
+    
+          
         </div>
     </nav>
 
@@ -118,9 +141,9 @@
             <div class="col-sm-4">
                 <h3>Rede Social</h3>
                 <ul class="list-inline list-social list-inline-sm">
-                    <img class="btn btn-default" src="https://img.icons8.com/color/48/000000/facebook.png">
-                    <img class="btn btn-default" src="https://img.icons8.com/office/40/000000/instagram-new.png">
-                    <img class="btn btn-default" src="https://img.icons8.com/color/48/000000/whatsapp.png">
+                    <img class="btn btn-default" src="https://img.icons8.com/ios/50/000000/facebook.png"/>
+                    <img class="btn btn-default" src="https://img.icons8.com/ios/50/000000/instagram-new.png"/>
+                    <img class="btn btn-default" src="https://img.icons8.com/ios/50/000000/whatsapp.png"/>
 
                 </ul>
             </div>
