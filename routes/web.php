@@ -28,4 +28,4 @@ route::get('/loginclient', 'AuthController@loginClient');
 route::get('/admin', 'AuthController@administracao');
 
 /*rota carrinho */ 
-Route::get('/carrinho', 'CarrinhoController@mostrarCarrinho');
+Route::get('/carrinho2', 'CarrinhoController@mostrarCarrinho');
