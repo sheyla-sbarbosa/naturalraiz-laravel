@@ -19,8 +19,8 @@ Route::get('/','HomeController@index');
 Route::get('produto', 'ProdutoController@index');
 
 /*Rotas para cadastro de clientes*/
-Route::get('/cadastroclient', 'CadastroController@cadastro');
-//Route::post('/cadastroclient', 'CadastroController@store');
+Route::get('/cadastroclient', 'ClienteController@cadastro');
+Route::post('/cadastroclient', 'ClienteController@store');
 
 /*rotas de login*/
 
