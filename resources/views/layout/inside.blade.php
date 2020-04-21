@@ -76,12 +76,6 @@
         </div>
     </nav>
 
-    <form class="form-inline mt-2 mb-2 mr-2 ml-2 justify-content-center">
-        <input class="form-control mr-sm-2" type="search" style="width: 600px;" placeholder="Pesquisar"
-            aria-label="Pesquisar">
-        <button class="btn btn-outline-success my-2 my-md-0 my-sm-0 pesquisar" type="submit">Pesquisar</button>
-    </form>
-
     </div><!-- final da navbar menu-->
 
 
