@@ -29,3 +29,6 @@ route::get('/admin', 'AuthController@administracao');
 
 /*rota carrinho */ 
 Route::get('/carrinho2', 'CarrinhoController@mostrarCarrinho');
+
+/*rota favoritos */
+Route::get('/favoritos', 'FavoritosController@listaFavoritos');

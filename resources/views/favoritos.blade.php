@@ -1,11 +1,11 @@
-@extends('layout.app')
+@extends('layout.inside')
 
 @section('conteudo')
 
 
 <body>
-    <div class="container mt-5">
-        <h5 class="titulo-pagina"> Seus itens do carrinho </h5>
+    <div class="container mt-5 mb-5">
+        <h5 class="titulo-pagina"> Seus itens favoritos</h5>
         <div class="row">
             <div class="col-12 col-lg-12 col-md-12 col-sm-12 col-12">
               <form action="#">
@@ -17,7 +17,7 @@
                         <th>Preço</th>
                         <th>Quantidade</th>
                         <th>Subtotal</th>
-                        <th>Delete</th>
+                        <th>Add no Carrinho</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -37,8 +37,9 @@
                         </td>
                         <td class="subtotal">R$4,00</td>
                         <td class="remover-produto">
-                          <a href="#"><i class="fa fa-pencil"></i></a>
-                          <a href="#"><i class="fa fa-times"></i></a>
+                            <button type="submit" class="btn coupon btn-success btn-lg btn-cart mb-4" value=""> Adicionar </button>
+                            
+                            <button type="submit" class="btn coupon btn-success btn-lg btn-cart " value=""> Remover </button>
                         </td>
                       </tr>
                       <tr>                      
@@ -57,14 +58,14 @@
                       </td>
                       <td class="subtotal">R$4,00</td>
                       <td class="remover-produto">
-                        <a href="#"><i class="fa fa-pencil"></i></a>
-                        <a href="#"><i class="fa fa-times"></i></a>
+                        <button type="submit" class="btn coupon btn-success btn-lg btn-cart mb-4 " value=""> Adicionar </button>
+                        <button type="submit" class="btn coupon btn-success btn-lg btn-cart " value=""> Remover </button>
                       </td>
                     </tr>
                     <tr>                      
                       <td class="foto-produto">
                         <a href="#">                              
-                          <img src="/img/hometomate.jpg" alt="" height="100" width="120">
+                          <img src="/img/hometomate.jpg" alt="" height="120" width="120">
                         </a>
                       </td>                        
                     
@@ -77,8 +78,8 @@
                     </td>
                     <td class="subtotal">R$4,00</td>
                     <td class="remover-produto">
-                      <a href="#"><i class="fa fa-pencil"></i></a>
-                      <a href="#"><i class="fa fa-times"></i></a>
+                        <button type="submit" class="btn coupon btn-success btn-lg btn-cart mb-4 " value=""> Adicionar </button>
+                        <button type="submit" class="btn coupon btn-success btn-lg btn-cart " value=""> Remover </button>
                     </td>
                   </tr>
                   <tr>
@@ -90,44 +91,5 @@
         </div>
     </div>
 
-    <div class="container mb-5">
-      <div class="row">
-        <div class=" col-7 col-lg-7 col-sm-7 col-md-7">
-          <div class="botoes-cart">
-            <button type="submit" class="btn btn-success btn-lg btn-cart" value=""> Editar Carrinho </button>
-            <button type="submit" class="btn btn-success btn-lg btn-cart" value=""> Continuar comprando </button>
-          </div>
-          <br>
-          <div class=" buttons-cart coupon">
-            <h3>Cupom</h3>
-            <p>Digite seu código de cupom, se você tiver um.</p>
-            <input placeholder="Código do cupom" type="text"> 
-            <button type="submit" class="btn coupon btn-success btn-lg btn-cart " value=""> Aplicar Cupom </button>     
-        </div>
-        </div>
-        <div class="col-5 col-lg-5 col-sm-5 col-md-5">
-          <div class="cart_totals  text-right">
-            <h2>Totais do Carrinho </h2>
-            <div class="cart-subtotal">
-                <span>Subtotal</span>    
-                <span>R$215.00</span>    
-            </div>
-            <div class="order-total">
-                <span><strong>Total</strong> </span>          
-                <span><strong>R$215.00 </strong> </span>
-            </div>
-            <div class="checkout">
-                <a href="#">Fazer Checkout</a>
-        </div>
-      </div>
-      </div>
-   </div>
-  </div>
-   
 
-<br>
-<br>
-<br>
-
-
-@endsection
+    @endsection
