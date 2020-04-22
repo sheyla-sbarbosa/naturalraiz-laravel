@@ -70,7 +70,21 @@ h5.titulo-pagina {
 	font-size: 14px;
 	font-weight: 700;
 	color: #fff;
-	border-radius: 20px;
+	border-radius: 10px;
+	border: 1px solid transparent;
+}
+
+.btn-cancel {
+
+    display: inline-block;
+	 
+    margin-left: 15px;
+    width: 90px;
+    height: 35px;
+	font-size: 14px;
+	font-weight: 600;
+	color: #fff;
+	border-radius: 10px;
 	border: 1px solid transparent;
 }
 
