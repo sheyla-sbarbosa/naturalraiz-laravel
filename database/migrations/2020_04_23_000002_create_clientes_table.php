@@ -25,15 +25,20 @@ class CreateClientesTable extends Migration
             $table->increments('id');
             $table->string('nome', 250)->nullable();
             $table->string('endereco_1', 250);
-            $table->string('endereco2', 250)->nullable();
+            $table->integer('cep1');
+            $table->string('numero1', 45)->nullable();
+            $table->string('complemento1')->nullable();
+            $table->string('bairro1')->nullable();
             $table->integer('telefone')->nullable();
             $table->integer('whatsapp')->nullable();
-            $table->longText('vendas_realizadas')->nullable()->comment('alias - Vendas ');
-            $table->enum('venda_tipo', ['avulso', 'assinatura'])->nullable()->comment('Assinatura de produtos- entrega semanal 
-Lista de produtos selecionado pelo cliente
-- oferecer produtos da estação ');
-            $table->enum('pagamento_formas', ['dinheiro', 'débito', 'crédito', 'paypal'])->nullable();
+            $table->longText('vendas_realizadas')->nullable();
+            $table->enum('venda_tipo', ['avulso', 'assinatura'])->nullable();
             $table->longText('favoritos')->nullable();
+            $table->string('endereco2', 250)->nullable();
+            $table->integer('cep2')->nullable();
+            $table->string('numero2', 45)->nullable();
+            $table->string('complemento2')->nullable();
+            $table->string('bairro2')->nullable();
         });
     }
 

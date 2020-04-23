@@ -19,8 +19,8 @@ Route::get('/','HomeController@index');
 Route::get('produto', 'ProdutoController@index');
 
 /*Rotas para cadastro de clientes*/
-Route::get('/cadastroclient', 'CadastroController@cadastro');
-//Route::post('/cadastroclient', 'CadastroController@store');
+Route::get('/cadastroclient', 'ClienteController@create');
+Route::post('/cadastroclient', 'ClienteController@store');
 
 /*rotas de login*/
 
@@ -28,4 +28,7 @@ route::get('/loginclient', 'AuthController@loginClient');
 route::get('/admin', 'AuthController@administracao');
 
 /*rota carrinho */ 
-Route::get('/carrinho', 'CarrinhoController@mostrarCarrinho');
+Route::get('/carrinho2', 'CarrinhoController@mostrarCarrinho');
+
+/*rota favoritos */
+Route::get('/favoritos', 'FavoritosController@listaFavoritos');

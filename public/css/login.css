@@ -1,5 +1,19 @@
+body {
+    font-family: 'Philosopher';
+    overflow-x: hidden;
+}
+
+
+
 #icones-nav a,
 #login a {
     color: #fff;
+    
+}
+
+.card-login {
+    background: transparent none repeat scroll 0 0;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
     
 }

@@ -30,8 +30,6 @@ class CreateAdminTable extends Migration
             $table->float('quantidade_produtos')->nullable();
             $table->date('data_venda')->nullable();
             $table->date('data_entrega')->nullable();
-            $table->integer('avaliação_produto')->nullable();
-            $table->enum('pagamento_formas', ['dinheiro', 'débito', 'crédito', 'pagamento eletrônico']);
             $table->unsignedInteger('id_cliente')->nullable();
         });
     }

@@ -24,11 +24,11 @@ class CreateVendasTable extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->integer('id_pedido')->nullable();
-            $table->enum('pagamento_forma', ['dinheiro', 'débito', 'crédito', 'paypal'])->nullable();
+            $table->enum('pagamento_forma', ['dinheiro', 'débito', 'crédito', 'vale refeição', 'vale-alimentação'])->nullable();
             $table->date('data_venda')->nullable();
             $table->float('estoque')->nullable();
             $table->enum('venda_tipo', ['avulso', 'assinatura'])->nullable();
-            $table->unsignedInteger('descricao_vendas_id');
+            $table->text('descricao_vendas_id');
 
             $table->index(["descricao_vendas_id"], 'fk_vendas_descricao_vendas1_idx');
 

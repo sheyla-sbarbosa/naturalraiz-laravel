@@ -23,7 +23,7 @@ class CreatePagamentosTable extends Migration
         Schema::create($this->tableName, function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->enum('pagamento_forma', ['dinheiro', 'débito', 'crédito', 'paypal'])->nullable();
+            $table->enum('pagamento_forma', ['dinheiro', 'débito', 'crédito', 'vale refeição', 'vale-alimentação'])->nullable();
             $table->unsignedInteger('vendas_id');
             $table->string('soma_vendas', 45)->nullable();
             $table->unsignedInteger('admin_id');

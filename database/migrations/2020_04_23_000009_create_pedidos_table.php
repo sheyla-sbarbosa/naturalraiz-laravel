@@ -30,12 +30,14 @@ class CreatePedidosTable extends Migration
             $table->float('total_pedido')->nullable();
             $table->date('data_venda')->nullable();
             $table->date('data_entrega')->nullable();
-            $table->enum('pagamento_formas', ['dinheiro', 'débito', 'crédito', 'paypal'])->nullable();
+            $table->enum('pagamento_formas', ['dinheiro', 'débito', 'crédito', 'vale refeição', 'vale-alimentação'])->nullable();
             $table->enum('status', ['Confirmação do Pedido', 'Em Separação', 'Envio', 'Entregue', 'Cancelado'])->nullable();
-            $table->integer('descricao_pedidos');
+            $table->text('descricao_pedidos');
             $table->unsignedInteger('vendas_id');
 
             $table->index(["descricao_pedidos"], 'fk_pedidos_Descricao_Pedidos1_idx');
+
+            $table->index(["cliente_id"], 'cliente_idx');
 
             $table->index(["vendas_id"], 'fk_pedidos_vendas1_idx');
 
@@ -47,6 +49,11 @@ class CreatePedidosTable extends Migration
 
             $table->foreign('vendas_id', 'fk_pedidos_vendas1_idx')
                 ->references('id')->on('vendas')
+                ->onDelete('no action')
+                ->onUpdate('no action');
+
+            $table->foreign('cliente_id', 'cliente_idx')
+                ->references('id')->on('clientes')
                 ->onDelete('no action')
                 ->onUpdate('no action');
         });
