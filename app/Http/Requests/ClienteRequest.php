@@ -4,7 +4,11 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+<<<<<<< HEAD
 class ClienteRequest extends FormRequest
+=======
+class clienteRequest extends FormRequest
+>>>>>>> d2a5125cf1e9a77fbbf29a79210b5b6526037d3f
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -37,12 +41,17 @@ class ClienteRequest extends FormRequest
     {
         return [
             'nome.required' => 'O campo nome é obrigatório.',
+            'email.required' => 'O campo E-mail é obrigatório',
             'email.email' => 'O campo email não está no formato correto',
             'password.required' => 'O campo senha é obrigatório',
             'password.min' => 'O campo senha tem o mínimo de 6 caracteres',
+            'password.confirmed' => 'O campo de confirmação tem que ser igual a senha.',
             'endereco1' => 'O campo endereço é obrigatório',
             'cep1' => 'o campo CEP é obrigatório', 
-            'numero_1' => 'o numero da sua casa é obrigatório'
+            'numero' => 'o numero da sua casa é obrigatório'
         ];
     }
 }
+
+}
+
