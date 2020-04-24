@@ -43,7 +43,7 @@
                         </div>
                         <div class="form-group">
                             <div class="col-lg-12 control">
-                                <div style="padding-top: 15px; font-size: 16px;">Você não possui cadastro? <a href="formulariocomprador.html" onclick="$('#loginbox').hide(); $('#signupbox').show()">
+                                <div style="padding-top: 15px; font-size: 16px;">Você não possui cadastro? <a href="/cadastroclient" onclick="$('#loginbox').hide(); $('#signupbox').show()">
     
                                                 Cadastre-se Aqui!
     

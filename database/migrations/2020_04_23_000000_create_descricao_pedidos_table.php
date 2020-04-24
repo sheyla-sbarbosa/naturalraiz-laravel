@@ -4,17 +4,17 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCategoriasTable extends Migration
+class CreateDescricaoPedidosTable extends Migration
 {
     /**
      * Schema table name to migrate
      * @var string
      */
-    public $tableName = 'categorias';
+    public $tableName = 'descricao_pedidos';
 
     /**
      * Run the migrations.
-     * @table categorias
+     * @table descricao_pedidos
      *
      * @return void
      */
@@ -23,17 +23,10 @@ class CreateCategoriasTable extends Migration
         Schema::create($this->tableName, function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->enum('categoria', ['Frutas', 'Legumes', 'Verduras', 'Ervas/Chás', 'Temperos'])->nullable();
-            $table->string('descricao_categoria', 45)->nullable();
-            $table->unsignedInteger('produtos_id');
-
-            $table->index(["produtos_id"], 'fk_Categorias_Produtos1_idx');
-
-
-            $table->foreign('produtos_id', 'fk_Categorias_Produtos1_idx')
-                ->references('id')->on('produtos')
-                ->onDelete('no action')
-                ->onUpdate('no action');
+            $table->float('quantidade_produto')->nullable();
+            $table->float('total_produtos')->nullable();
+            $table->float('valor_produto')->nullable();
+            $table->float('soma_valor')->nullable();
         });
     }
 

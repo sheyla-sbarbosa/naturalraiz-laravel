@@ -1,10 +1,19 @@
+<<<<<<< HEAD
+
+  @extends('layout.inside')
+  @section('conteudo')
+=======
 @extends('layout.inside')
 @section('conteudo')
+>>>>>>> d2a5125cf1e9a77fbbf29a79210b5b6526037d3f
   <body>
   
 
   <div class="container mt-5">
   <form action="" method="post" enctype="multipart/form-data">
+  @csrf
+
+
         <div class="form-row">
           <div class="col-md-12">
        <h1 class="text-center">Faça seu cadastro</h1>
@@ -16,6 +25,9 @@
           <div class="col-md-12">
             <label for="">Nome Completo</label>
             <input name="nome" type="text" class="form-control" placeholder="Nome" required> 
+            @error('nome')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
           </div>
 
           
@@ -26,11 +38,15 @@
         <div class="form-row">
           <div class="form-group col-md-6">
           <label for="inputFone">Telefone com WhatsApp</label>
-          <input name="telefone1" type="text" class="form-control" id="inputFone" placeholder="Telefone" pattern="\([0-9]{2}\)[0-9]{4,6}-[0-9]{3,4}$">
+          <input name="telefone1" type="tel" class="form-control" id="inputFone" placeholder="WhatsApp" >
+          @error('whatsapp')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
 </div> 
+
           <div class="form-group col-md-6">
           <label for="inputFone" class="control-label">Telefone de recado</label>
-          <input name="telefone2" type="text" class="form-control" id="inputFone" placeholder="Telefone" pattern="\([0-9]{2}\)[0-9]{4,6}-[0-9]{3,4}$">
+          <input name="telefone2" type="tel" class="form-control" id="inputFone" placeholder="Telefone">
   </div>
 </div>
 
@@ -40,6 +56,9 @@
               <div class="form-group col-md-6">
                 <label for="emailaddress">Email</label>
                 <input name="email" type="email" class="form-control" id="emailaddress" placeholder="Email">
+                @error('email')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
               </div>
               
               
@@ -50,8 +69,11 @@
                 <label for="inputpassword">Senha</label>
                 <input name="password" type="password" class="form-control" id="inputpassword" placeholder="Senha">
               </div>
+              @error('password')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
             </div>
-            
+          
 
 
             <div class="container_endereco">
@@ -62,17 +84,26 @@
               <div class="form-group col-12">
                 <label for="inputAddress">Endereço</label>
                 <input name="endereco1" type="text" class="form-control" id="inputAddress" placeholder="Digite seu endereço" required>
+                @error('endereco_1')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
               </div>
 
 
             <div class="form-group col-md-6">
               <label for="inputCEP">CEP</label>
               <input name="cep1" type="text" class="form-control" id="inputCEP">
+              @error('cep_1')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
             </div>
 
             <div class="form-group col-md-6">
               <label for="inputBairro">Bairro</label>
-              <input type="text" class="form-control" placeholder="Bairro">
+              <input name="bairro1" type="text" class="form-control" placeholder="Bairro">
+              @error('bairro_1')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
             </div>
           </div>
           
@@ -83,12 +114,24 @@
             
             <div class="form-group col-md-4">
             <label for="inputNum">Número</label>
+<<<<<<< HEAD
+            <input name="numero1" type="text" class="form-control" placeholder="Número">
+            @error('numero_1')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
+=======
             <input name="numero" type="text" class="form-control" placeholder="Número da casa">
+>>>>>>> d2a5125cf1e9a77fbbf29a79210b5b6526037d3f
           </div>
           
           <div class="form-group col-md-8">
             <label for="inputComplemento">Complemento</label>
+<<<<<<< HEAD
+            <input name="complemento_1" type="text" class="form-control" placeholder="Complemento">
+          
+=======
             <input name="complemento" type="text" class="form-control" placeholder="Apto, bloco, lote">
+>>>>>>> d2a5125cf1e9a77fbbf29a79210b5b6526037d3f
           </div>
           
          <!-- Cadastre outro Endereço -->
@@ -122,7 +165,7 @@
       </div>
     </div>
       </form>
-
+      @endsection
 <!-- Modal-->>
 <div class="modal fade" id="enderecoopcional" tabindex="-1" role="dialog">
 <div class="modal-dialog" role="document">
@@ -140,17 +183,20 @@
   <div class="form-group col-12">
     <label for="endereço opcional">Endereço</label>
     <input name="endereco2" type="text" class="form-control" id="inputAddress" placeholder="Digite seu endereço">
+  
   </div>
 
 
 <div class="form-group col-md-6">
   <label for="inputCEP">CEP</label>
-  <input name="cep1" type="text" class="form-control" id="inputCEP">
+  <input name="cep2" type="text" class="form-control" id="inputCEP">
+  
 </div>
 
 <div class="form-group col-md-6">
   <label for="inputBairro">Bairro</label>
-  <input type="text" class="form-control" placeholder="Bairro">
+  <input name="bairro2" type="text" class="form-control" placeholder="Bairro">
+  
 </div>
 </div>
 
@@ -161,12 +207,13 @@
 
 <div class="form-group col-md-4">
 <label for="inputNum">Número</label>
-<input name="numero" type="text" class="form-control" placeholder="Número">
+<input name="numero2" type="text" class="form-control" placeholder="Número">
+
 </div>
 
 <div class="form-group col-md-8">
 <label for="inputComplemento">Complemento</label>
-<input name="complemento" type="text" class="form-control" placeholder="Complemento">
+<input name="complemento2" type="text" class="form-control" placeholder="Complemento">
 </div>
 
 </form>

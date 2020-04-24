@@ -70,6 +70,9 @@ h5.titulo-pagina {
 	font-size: 14px;
 	font-weight: 700;
 	color: #fff;
+<<<<<<< HEAD
+	border-radius: 20px;
+=======
 	border-radius: 10px;
 	border: 1px solid transparent;
 }
@@ -83,6 +86,7 @@ h5.titulo-pagina {
 	font-weight: 700;
 	color: #fff;
 	border-radius: 10px;
+>>>>>>> d2a5125cf1e9a77fbbf29a79210b5b6526037d3f
 	border: 1px solid transparent;
 }
 

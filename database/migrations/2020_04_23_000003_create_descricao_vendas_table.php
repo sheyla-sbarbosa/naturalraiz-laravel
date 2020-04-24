@@ -4,17 +4,17 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAdminTable extends Migration
+class CreateDescricaoVendasTable extends Migration
 {
     /**
      * Schema table name to migrate
      * @var string
      */
-    public $tableName = 'admin';
+    public $tableName = 'descricao_vendas';
 
     /**
      * Run the migrations.
-     * @table admin
+     * @table descricao_vendas
      *
      * @return void
      */
@@ -22,15 +22,11 @@ class CreateAdminTable extends Migration
     {
         Schema::create($this->tableName, function (Blueprint $table) {
             $table->engine = 'InnoDB';
-            $table->increments('id');
-            $table->integer('id_vendas');
-            $table->integer('id_pedidos');
-            $table->float('soma_vendas')->nullable();
+            $table->increments('id')->nullable();
+            $table->float('quantidade-produto')->nullable();
+            $table->float('total_produtos')->nullable();
             $table->float('valor_produto')->nullable();
-            $table->float('quantidade_produtos')->nullable();
-            $table->date('data_venda')->nullable();
-            $table->date('data_entrega')->nullable();
-            $table->unsignedInteger('id_cliente')->nullable();
+            $table->float('soma_valor')->nullable();
         });
     }
 
