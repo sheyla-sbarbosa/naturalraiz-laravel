@@ -27,8 +27,8 @@
             <strong style="color: white;">Natural Raiz</strong></a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
-            aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
-            <span class="navbar-toggler-icon"></span>
+            aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação" >
+            <span class="navbar-toggler-icon" style="background-color:white;"  ></span>
         </button>
 
         <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">

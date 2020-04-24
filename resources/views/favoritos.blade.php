@@ -12,7 +12,7 @@
                 <table class="table table-content">
                   <thead>
                       <tr>
-                        <th>Image</th>
+                        <th>Foto</th>
                         <th>Nome Produto</th>
                         <th>Preço</th>
                         <th>Quantidade</th>
@@ -39,7 +39,7 @@
                         <td class="remover-produto">
                             <button type="submit" class="btn coupon btn-success btn-lg btn-cart mb-4" value=""> Adicionar </button>
                             
-                            <button type="submit" class="btn coupon btn-success btn-lg btn-cart " value=""> Remover </button>
+                            <button type="submit" class="btn coupon btn-danger btn-lg btn-cancel " value=""> Remover </button>
                         </td>
                       </tr>
                       <tr>                      
@@ -59,7 +59,7 @@
                       <td class="subtotal">R$4,00</td>
                       <td class="remover-produto">
                         <button type="submit" class="btn coupon btn-success btn-lg btn-cart mb-4 " value=""> Adicionar </button>
-                        <button type="submit" class="btn coupon btn-success btn-lg btn-cart " value=""> Remover </button>
+                        <button type="submit" class="btn coupon btn-danger btn-lg btn-cancel " value=""> Remover </button>
                       </td>
                     </tr>
                     <tr>                      
@@ -79,7 +79,7 @@
                     <td class="subtotal">R$4,00</td>
                     <td class="remover-produto">
                         <button type="submit" class="btn coupon btn-success btn-lg btn-cart mb-4 " value=""> Adicionar </button>
-                        <button type="submit" class="btn coupon btn-success btn-lg btn-cart " value=""> Remover </button>
+                        <button type="submit" class="btn coupon btn-danger btn-lg btn-cancel " value=""> Remover </button>
                     </td>
                   </tr>
                   <tr>
