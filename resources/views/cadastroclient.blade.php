@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 
   @extends('layout.inside')
   @section('conteudo')
-=======
-@extends('layout.inside')
-@section('conteudo')
->>>>>>> d2a5125cf1e9a77fbbf29a79210b5b6526037d3f
   <body>
   
 
@@ -114,24 +109,16 @@
             
             <div class="form-group col-md-4">
             <label for="inputNum">Número</label>
-<<<<<<< HEAD
             <input name="numero1" type="text" class="form-control" placeholder="Número">
             @error('numero_1')
                         <div class="text-danger">{{ $message }}</div>
                     @enderror
-=======
-            <input name="numero" type="text" class="form-control" placeholder="Número da casa">
->>>>>>> d2a5125cf1e9a77fbbf29a79210b5b6526037d3f
           </div>
           
           <div class="form-group col-md-8">
             <label for="inputComplemento">Complemento</label>
-<<<<<<< HEAD
             <input name="complemento_1" type="text" class="form-control" placeholder="Complemento">
           
-=======
-            <input name="complemento" type="text" class="form-control" placeholder="Apto, bloco, lote">
->>>>>>> d2a5125cf1e9a77fbbf29a79210b5b6526037d3f
           </div>
           
          <!-- Cadastre outro Endereço -->
@@ -167,6 +154,9 @@
       </form>
       @endsection
 <!-- Modal-->>
+@extends('layout.inside')
+  @section('conteudo')
+
 <div class="modal fade" id="enderecoopcional" tabindex="-1" role="dialog">
 <div class="modal-dialog" role="document">
 <div class="modal-content">
