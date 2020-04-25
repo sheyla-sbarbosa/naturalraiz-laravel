@@ -5,7 +5,7 @@
   
 
   <div class="container mt-5">
-  <form action="" method="post" enctype="multipart/form-data">
+  <form action="{{route ('cliente.store')}}" method="post" enctype="multipart/form-data">
   @csrf
 
 
@@ -128,8 +128,8 @@
           <div class="row">
             <div class=" col-7 col-lg-7 col-sm-7 col-md-7">
               <div class="botoes-cart">
-                <button type="submit" class="btn btn-success btn-lg btn-cart" value=""> Entrar </button>
-                <button type="submit" class="btn btn-danger btn-lg btn-cancel" value=""> cancelar </button>
+                <button  type="submit" class="btn btn-success btn-lg btn-cart" value="Adicionar Cliente"> Entrar </button>
+                <button type="submit" class="btn btn-danger btn-lg btn-cancel" value="Cancelar Cadastro"> Cancelar </button>
               </div>
               <br>
               

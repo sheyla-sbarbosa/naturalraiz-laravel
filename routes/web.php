@@ -20,7 +20,7 @@ Route::get('produto', 'ProdutoController@index');
 
 /*Rotas para cadastro de clientes*/
 Route::get('/cadastroclient', 'ClienteController@create');
-Route::post('/cadastroclient', 'ClienteController@store');
+Route::post('/cadastroclient', 'ClienteController@store')->name('cliente.store');
 
 /*rotas de login*/
 
