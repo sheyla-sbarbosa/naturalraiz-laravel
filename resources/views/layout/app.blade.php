@@ -65,16 +65,26 @@
                 </li>
 
             </ul>
-
+<!-- linkar pagina de produtos-->
+<a href="produto">
             <label class="btn btn-default" style="color:white;">
                 <img src="https://img.icons8.com/ios/26/ffffff/add-shopping-cart.png"/> Comprar                  
-            </label>
+            </a>
             
+            </label>
+
+
+             <!-- linkar pagina de favoritos-->
+             <a href="/favoritos">
             <label class="btn btn-default" style="color:white;">
                 <img src="https://img.icons8.com/ios/26/ffffff/hearts.png"/> Favoritos
+                </a>
             </label>
+             <!-- linkar pagina de cadastro-->
+             <a href="/loginclient">
             <label class="btn btn-default" style="color:white;">
                 <img src="https://img.icons8.com/ios/26/ffffff/login-rounded-right.png"/> Entrar
+                </a>
             </label> 
         </div>
     </nav>

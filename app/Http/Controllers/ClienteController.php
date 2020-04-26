@@ -12,7 +12,7 @@ class ClienteController extends Controller
     
     public function index() {
         $novocliente = Clientes::paginate();
-        return view('cadastroclient', ['clientes' => $novoscliente]);
+        return view('cadastroclient', ['clientes' => $novocliente]);
     }
 
     public function create() {
@@ -51,7 +51,7 @@ class ClienteController extends Controller
        
     
 
-        return redirect('cadastroclient')
+        return redirect('home')
             ->with('mensagem', 'Cadastro realizado com sucesso');
     }     
 }

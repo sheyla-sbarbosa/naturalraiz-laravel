@@ -37,7 +37,7 @@
                         </div>
                         <div style="margin-top: 10px;" class="form-group">
                             <!-- Button -->
-                            <div class="col-md-12 controls"> <a id="btn-login" href="#" class="btn btn-success btn-cart" style="width: 290px;"> Acessar  </a>
+                            <div class="col-md-12 controls"> <a id="btn-login" href="/" class="btn btn-success btn-cart" style="width: 290px;"> Acessar  </a>
                             
                             </div>
                         </div>

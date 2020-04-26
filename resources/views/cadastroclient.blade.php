@@ -1,10 +1,16 @@
+<<<<<<< HEAD
 @extends('layout.inside')
 @section('conteudo')
+=======
+
+  @extends('layout.inside')
+  @section('conteudo')
+>>>>>>> 29c02ebd1a0d4d3f4882624f83b559e3bedd251a
   <body>
   
 
   <div class="container mt-5">
-  <form action="" method="post" enctype="multipart/form-data">
+  <form action="{{route ('cliente.store')}}" method="post" enctype="multipart/form-data">
   @csrf
 
 
@@ -108,24 +114,16 @@
             
             <div class="form-group col-md-4">
             <label for="inputNum">Número</label>
-<<<<<<< HEAD
             <input name="numero1" type="text" class="form-control" placeholder="Número">
             @error('numero_1')
                         <div class="text-danger">{{ $message }}</div>
                     @enderror
-=======
-            <input name="numero" type="text" class="form-control" placeholder="Número da casa">
->>>>>>> d2a5125cf1e9a77fbbf29a79210b5b6526037d3f
           </div>
           
           <div class="form-group col-md-8">
             <label for="inputComplemento">Complemento</label>
-<<<<<<< HEAD
             <input name="complemento_1" type="text" class="form-control" placeholder="Complemento">
           
-=======
-            <input name="complemento" type="text" class="form-control" placeholder="Apto, bloco, lote">
->>>>>>> d2a5125cf1e9a77fbbf29a79210b5b6526037d3f
           </div>
           
          <!-- Cadastre outro Endereço -->
@@ -135,8 +133,8 @@
           <div class="row">
             <div class=" col-7 col-lg-7 col-sm-7 col-md-7">
               <div class="botoes-cart">
-                <button type="submit" class="btn btn-success btn-lg btn-cart" value=""> Entrar </button>
-                <button type="submit" class="btn btn-danger btn-lg btn-cancel" value=""> cancelar </button>
+                <button  type="submit" class="btn btn-success btn-lg btn-cart" value="Adicionar Cliente"> Entrar </button>
+                <button type="submit" class="btn btn-danger btn-lg btn-cancel" value="Cancelar Cadastro"> Cancelar </button>
               </div>
               <br>
               
@@ -161,6 +159,9 @@
       </form>
       @endsection
 <!-- Modal-->>
+@extends('layout.inside')
+  @section('conteudo')
+
 <div class="modal fade" id="enderecoopcional" tabindex="-1" role="dialog">
 <div class="modal-dialog" role="document">
 <div class="modal-content">
