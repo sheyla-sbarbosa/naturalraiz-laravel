@@ -5,31 +5,23 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
-
+    <script src="https://kit.fontawesome.com/723a0733ae.js" crossorigin="anonymous"></script>
+   <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT&family=Philosopher&family=Playfair+Display:ital,wght@0,400;1,500&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/cadastro.css">
     <link rel="stylesheet" href="css/produto2.css">
     <link rel="stylesheet" href="css/produtos1.css">
-    
-    
-    
-    
-
-
-    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT&family=Philosopher&family=Playfair+Display:ital,wght@0,400;1,500&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="css\carrinho.css">
     <title> Natural Raíz </title>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(30, 172, 60);">
+    <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="#">
             <img src="img/logomarca.png" width="30" height="30" class="d-inline-block align-top" alt=""> 
             <span class=" title">
@@ -38,16 +30,15 @@
         </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
-            aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
-            <span class="navbar-toggler-icon"></span>
+            aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação" >
+            <span class="navbar-toggler-icon" style="background-color:white;"  ></span>
         </button>
 
         <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active ">
-                    <a class="nav-link" style="color: white;" href="#">Home <span class="sr-only">(página
-                            atual)</span></a>
-                </li>
+                    <a class="nav-link" style="color: white;" href="#">Home <span class="sr-only">(página atual)</span></a>
+                </li> 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" style="color: white;" href="#" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -55,7 +46,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="#">Quem Somos</a>
-                        <a class="dropdown-item" href="#">Como Vender</a>
+                       
                         <a class="dropdown-item" href="#">Ajuda</a>
                     </div>
                 </li>
@@ -72,40 +63,26 @@
                         <a class="dropdown-item" href="produto1.html">Temperos</a>
                     </div>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" style="color: white;" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Roças
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Roça do José</a>
-                        <a class="dropdown-item" href="#">Roça Maria</a>
-                        <a class="dropdown-item" href="#">Roça Toninho</a>
-                    </div>
-                </li>
 
             </ul>
 
+            <label class="btn btn-default" style="color:white;">
+                <img src="https://img.icons8.com/ios/26/ffffff/add-shopping-cart.png"/> Comprar                  
+            </label>
             
-                <label class="btn btn-default" style="color:white;">
-                    <img src="https://img.icons8.com/ios/30/ffffff/add-shopping-cart.png"/> Comprar                  
-                </label>
-                
-                <label class="btn btn-default" style="color:white;">
-                    <img src="https://img.icons8.com/ios/30/ffffff/hearts.png"/> Favoritos
-                </label>
-                <label class="btn btn-default" style="color:white;">
-                    <img src="https://img.icons8.com/ios/30/ffffff/login-rounded-right.png"/> Entrar
-                </label> 
-    
-          
+            <label class="btn btn-default" style="color:white;">
+                <img src="https://img.icons8.com/ios/26/ffffff/hearts.png"/> Favoritos
+            </label>
+            <label class="btn btn-default" style="color:white;">
+                <img src="https://img.icons8.com/ios/26/ffffff/login-rounded-right.png"/> Entrar
+            </label> 
         </div>
     </nav>
 
     <form class="form-inline mt-2 mb-2 mr-2 ml-2 justify-content-center">
         <input class="form-control mr-sm-2" type="search" style="width: 600px;" placeholder="Pesquisar"
             aria-label="Pesquisar">
-        <button class="btn btn-outline-success my-2 my-md-0 my-sm-0 " type="submit">Pesquisar</button>
+        <button class="btn btn-outline-success my-2 my-md-0 my-sm-0 pesquisar" type="submit">Pesquisar</button>
     </form>
 
     </div><!-- final da navbar menu-->
@@ -114,7 +91,7 @@
          @yield('conteudo')
     
     <!--inicio footer-->
-    <hr>
+    
 
     <div class="footer text-center">
         <div class="row">
@@ -139,6 +116,7 @@
                 </div>
             </div>
             <div class="col-sm-4">
+
                 <h3>Rede Social</h3>
                 <ul class="list-inline list-social list-inline-sm">
                     <img class="btn btn-default" src="https://img.icons8.com/ios/50/000000/facebook.png"/>
@@ -149,7 +127,11 @@
             </div>
         </div>
     </div>
-
+    <div class="container-fluid text-center" style="background-color: rgb(15, 70, 19); color:white;" >
+        <br>
+        © 2020 Natural Raiz. Todos os direitos reservados.
+        <br>
+    </div>
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
