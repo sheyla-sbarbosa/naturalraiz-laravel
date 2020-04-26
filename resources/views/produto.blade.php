@@ -54,7 +54,7 @@
                                     </dl>
                                 </div>
                                 <hr>
-                                <a href="#" class="btn btn-outline-success btn d-inline-block"
+                                <a href="/carrinho2" class="btn btn-outline-success btn d-inline-block"
                                     style="height: 40px;">Adicionar</a>
                     </article>
                 </aside>

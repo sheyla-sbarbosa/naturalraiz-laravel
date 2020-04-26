@@ -45,7 +45,7 @@
                         Empresa
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Quem Somos</a>
+                        <a class="dropdown-item" href="empresa">Quem Somos</a>
                        
                         <a class="dropdown-item" href="#">Ajuda</a>
                     </div>
@@ -56,11 +56,11 @@
                         Produto
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="produto1.html">Verdura</a>
-                        <a class="dropdown-item" href="produto1.html">Legumes</a>
-                        <a class="dropdown-item" href="produto1.html">Frutas</a>
-                        <a class="dropdown-item" href="produto1.html">Ervas/Chás</a>
-                        <a class="dropdown-item" href="produto1.html">Temperos</a>
+                        <a class="dropdown-item" href="/produto">Verdura</a>
+                        <a class="dropdown-item" href="/produto">Legumes</a>
+                        <a class="dropdown-item" href="/produto">Frutas</a>
+                        <a class="dropdown-item" href="/produto">Ervas/Chás</a>
+                        <a class="dropdown-item" href="/produto">Temperos</a>
                     </div>
                 </li>
 
