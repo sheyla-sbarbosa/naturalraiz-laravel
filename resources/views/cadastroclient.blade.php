@@ -157,10 +157,11 @@
       </div>
     </div>
       </form>
-      @endsection
+     
+
+
 <!-- Modal-->>
-@extends('layout.inside')
-  @section('conteudo')
+
 
 <div class="modal fade" id="enderecoopcional" tabindex="-1" role="dialog">
 <div class="modal-dialog" role="document">

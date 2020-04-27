@@ -42,7 +42,7 @@ class ClienteController extends Controller
         $novocliente -> bairro2 = $request-> bairro_opcional;
         $novocliente -> numero2 = $request-> numero_opcional;
         $novocliente -> complemento2 = $request-> complemento_opcional;
-        $novocliente -> save();
+        $novocliente -> fill($novocliente)->save();
 
 
 
@@ -51,7 +51,7 @@ class ClienteController extends Controller
        
     
 
-        return redirect('home')
+        return redirect('./home')
             ->with('mensagem', 'Cadastro realizado com sucesso');
     }     
 }
