@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
     <script src="https://kit.fontawesome.com/723a0733ae.js" crossorigin="anonymous"></script>
    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT&family=Philosopher&family=Playfair+Display:ital,wght@0,400;1,500&display=swap" rel="stylesheet">
-    
+   <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/cadastro.css">
