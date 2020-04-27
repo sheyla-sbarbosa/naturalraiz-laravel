@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-@extends('layout.inside')
-@section('conteudo')
-=======
 
   @extends('layout.inside')
   @section('conteudo')
->>>>>>> 29c02ebd1a0d4d3f4882624f83b559e3bedd251a
   <body>
   
 

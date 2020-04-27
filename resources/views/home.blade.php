@@ -45,7 +45,7 @@
         <div class="row mb-4">
             <div class="col mb-4">
                 <div class="card border-white h-100">
-                    <img src="{{asset ('/img/itens1.png')}}" class="m-auto" alt="e-connection" id="image-card">
+                    <img src="{{asset ('/img/itens1.png')}}" class="m-auto" alt="etiqueta" id="image-card">
             <div class="card-body">
               <h5 class="card-title">Ecommerce</h5>
             <p class="card-text">Somos um Ecommerce de produtos naturais.</p>
@@ -54,7 +54,7 @@
             </div>
             <div class="col mb-4">
                 <div class="card border-white h-100">
-              <img src="{{asset ('/img/itens3.png')}}" class="m-auto" alt="e-connection"  width="100" height="100">
+              <img src="{{asset ('/img/itens3.png')}}" class="m-auto" alt="loja"  width="100" height="100">
               <div class="card-body">
                   <h5 class="card-title">Loja Virtual</h5>
                   <p class="card-text">Processo totalmente online, sem você precisar sair de casa.</p>
@@ -63,7 +63,7 @@
         </div>
         <div class="col mb-4">
             <div class="card border-white h-100">
-                <img src="{{asset ('/img/itens2.png')}}" class="m-auto" alt="e-connection"  width="100" height="100">
+                <img src="{{asset ('/img/itens2.png')}}" class="m-auto" alt="carrinhocompras"  width="100" height="100">
                 <div class="card-body">
               <h5 class="card-title"> Nossos produtos </h5>
               <p class="card-text">Oferecemos tudo na melhor qualidade, diretamente das nossas roças.</p>
