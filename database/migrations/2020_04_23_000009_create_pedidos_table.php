@@ -47,7 +47,7 @@ class CreatePedidosTable extends Migration
                 ->onDelete('no action')
                 ->onUpdate('no action');
 
-            $table->foreign('vendas_id', 'fk_pedidos_vendas_idx')
+            $table->foreign('vendas_id', 'fk_pedidos_vendas"_idx')
                 ->references('id')->on('vendas')
                 ->onDelete('no action')
                 ->onUpdate('no action');
