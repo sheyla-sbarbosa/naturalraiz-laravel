@@ -23,17 +23,17 @@ class CreateVendasTable extends Migration
         Schema::create($this->tableName, function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->integer('id_pedido')->nullable();
+            $table->integer('pedido_id')->nullable()->unsigned();
             $table->enum('pagamento_forma', ['dinheiro', 'débito', 'crédito', 'vale refeição', 'vale-alimentação'])->nullable();
             $table->date('data_venda')->nullable();
             $table->float('estoque')->nullable();
             $table->enum('venda_tipo', ['avulso', 'assinatura'])->nullable();
-            $table->text('descricao_vendas_id');
+            $table->integer('descricao_vendas_id')->unsigned();
 
-            $table->index(["descricao_vendas_id"], 'fk_vendas_descricao_vendas1_idx');
+            $table->index(["descricao_vendas_id"], 'fk_vendas_descricao_vendas_idx');
 
 
-            $table->foreign('descricao_vendas_id', 'fk_vendas_descricao_vendas1_idx')
+            $table->foreign('descricao_vendas_id', 'fk_vendas_descricao_vendas_idx')
                 ->references('id')->on('descricao_vendas')
                 ->onDelete('no action')
                 ->onUpdate('no action');

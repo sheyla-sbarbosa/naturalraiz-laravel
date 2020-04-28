@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 
 
-class Cadastro extends Model
+class Cadastroclient extends Model
 {
     protected $fillable = [
 

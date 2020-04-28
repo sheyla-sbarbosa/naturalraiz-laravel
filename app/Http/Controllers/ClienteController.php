@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Cliente;
+use App\Pedidos;
+use App\Produto;
+use App\Vendas;
+
 use App\Http\Requests\ClienteRequest;
 
 
@@ -11,8 +15,8 @@ class ClienteController extends Controller
 {
     
     public function index() {
-        $novocliente = Clientes::paginate();
-        return view('cadastroclient', ['clientes' => $novocliente]);
+        $novocliente = Cadastroclient::paginate();
+        return view('cadastroclient');
     }
 
     public function create() {
@@ -20,13 +24,13 @@ class ClienteController extends Controller
     }
 
     
-    //public function cadastro()
-    //{return view('cadastroclient');}
+    public function cadastro()
+    {return view('cadastroclient');}
 
 
     public function store(ClienteRequest $request) {
         
-        $novocliente = new Clientes();
+        $novocliente = new Cliente();
         $novocliente -> nome = $request-> nome;
         $novocliente -> telefone1 = $request-> whatsapp;
         $novocliente -> telefone2 = $request-> telefone;
@@ -45,11 +49,6 @@ class ClienteController extends Controller
         $novocliente -> fill($novocliente)->save();
 
 
-
-
-    
-       
-    
 
         return redirect('./home')
             ->with('mensagem', 'Cadastro realizado com sucesso');

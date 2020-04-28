@@ -24,11 +24,11 @@ class CreateClientesTable extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('nome', 250)->nullable();
-            $table->string('endereco_1', 250);
-            $table->integer('cep_1');
-            $table->string('numero_1', 45)->nullable();
+            $table->string('endereco1', 250);
+            $table->integer('cep1');
+            $table->string('numero1', 45)->nullable();
             $table->string('complemento_1')->nullable();
-            $table->string('bairro_1')->nullable();
+            $table->string('bairro1')->nullable();
             $table->integer('telefone')->nullable();
             $table->integer('whatsapp')->nullable();
             $table->longText('vendas_realizadas')->nullable()->comment('alias - Vendas ');
@@ -40,6 +40,11 @@ class CreateClientesTable extends Migration
             $table->string('numero_2', 45)->nullable();
             $table->string('complemento_2')->nullable();
             $table->string('bairro_2')->nullable();
+            $table->string('email')->unique();
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('password');      
+            $table->rememberToken(); 
+            $table->timestamps();
         });
     }
 
