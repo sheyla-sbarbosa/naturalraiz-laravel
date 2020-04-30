@@ -139,93 +139,88 @@
                 
                 <a href="#" class= "btn-secondary btn btn-lg btn-cart mb-4 " type="button" data-toggle="modal" data-target="#enderecoopcional" > Outro endereço </a>
                  
+              </div>
             </div>
           </div>
-          </div>
-       </div>
+        </div>
       </div>
-       
-          
+      
+      
         
       
         
-      </div>
     </div>
-      </form>
-      @endsection
+  </div>
+</form>
 <!-- Modal-->>
-@extends('layout.inside')
-  @section('conteudo')
 
-<div class="modal fade" id="enderecoopcional" tabindex="-1" role="dialog">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header">
-<button type="button" class="fechar" data-dismiss="modal">
-<span>&times;</span> </button>
- 
-<div class="modal-body">
-<form action="" method="POST" role="form">
-
-<div class="form-row">
-
-
-  <div class="form-group col-12">
-    <label for="endereço opcional">Endereço</label>
-    <input name="endereco2" type="text" class="form-control" id="inputAddress" placeholder="Digite seu endereço">
+  <div class="modal fade" id="enderecoopcional" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+  <div class="modal-content">
+  <div class="modal-header">
+  <button type="button" class="fechar" data-dismiss="modal">
+  <span>&times;</span> </button>
+   
+  <div class="modal-body">
+  <form action="" method="POST" role="form">
+  
+  <div class="form-row">
+  
+  
+    <div class="form-group col-12">
+      <label for="endereço opcional">Endereço</label>
+      <input name="endereco2" type="text" class="form-control" id="inputAddress" placeholder="Digite seu endereço">
+    
+    </div>
+  
+  
+  <div class="form-group col-md-6">
+    <label for="inputCEP">CEP</label>
+    <input name="cep2" type="text" class="form-control" id="inputCEP">
+    
+  </div>
+  
+  <div class="form-group col-md-6">
+    <label for="inputBairro">Bairro</label>
+    <input name="bairro2" type="text" class="form-control" placeholder="Bairro">
+    
+  </div>
+  </div>
+  
+  
+  
+  <!--Inserir complemento - numero e apartamento bairro-->
+  <div class="form-row">
+  
+  <div class="form-group col-md-4">
+  <label for="inputNum">Número</label>
+  <input name="numero2" type="text" class="form-control" placeholder="Número">
   
   </div>
-
-
-<div class="form-group col-md-6">
-  <label for="inputCEP">CEP</label>
-  <input name="cep2" type="text" class="form-control" id="inputCEP">
   
-</div>
-
-<div class="form-group col-md-6">
-  <label for="inputBairro">Bairro</label>
-  <input name="bairro2" type="text" class="form-control" placeholder="Bairro">
+  <div class="form-group col-md-8">
+  <label for="inputComplemento">Complemento</label>
+  <input name="complemento2" type="text" class="form-control" placeholder="Complemento">
+  </div>
   
-</div>
-</div>
-
-
-
-<!--Inserir complemento - numero e apartamento bairro-->
-<div class="form-row">
-
-<div class="form-group col-md-4">
-<label for="inputNum">Número</label>
-<input name="numero2" type="text" class="form-control" placeholder="Número">
-
-</div>
-
-<div class="form-group col-md-8">
-<label for="inputComplemento">Complemento</label>
-<input name="complemento2" type="text" class="form-control" placeholder="Complemento">
-</div>
-
-</form>
-        <div class="modal-footer">
-          <button name="enviar" type="submit" class="btn btn-primary">Entrar</button>
-          <button name="cancelar" type="submit" class="btn btn-danger">Cancelar</button>
-        </div>
-        
-
- </div>
-
-</div>
-
-</div>
-
-</div>
-
-
-
-</div>
-
-
+  </form>
+          <div class="modal-footer">
+            <button name="enviar" type="submit" class="btn btn-primary">Entrar</button>
+            <button name="cancelar" type="submit" class="btn btn-danger">Cancelar</button>
+          </div>
+          
+  
+   </div>
+  
+  </div>
+  
+  </div>
+  
+  </div>
+  
+  </div>
+  
+  
 </div>
 
 </div>
