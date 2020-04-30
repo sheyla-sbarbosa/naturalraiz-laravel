@@ -79,13 +79,9 @@
                                     
                                 </div>
                                 <hr>
-<<<<<<< HEAD
-                                <a href="/carrinho2" class="btn btn-outline-success btn d-inline-block"
-                                    style="height: 40px;">Adicionar</a>
-=======
                                 <div class="col-sm-4 mt-3" >
                                    
-                                    <a href="#" class="btn btn-outline-success btn btn-cart d-inline-block"
+                                    <a href="/carrinho2" class="btn btn-outline-success btn btn-cart d-inline-block"
                                         style="height: 38px; padding: 10px;">Adicionar</a>
                                 </div>
                                 
@@ -94,7 +90,6 @@
                                         style="height: 38px; padding: 10px;">Continuar comprando</a>
                                 
                                 
->>>>>>> fcf1904866e891a8c0ed92914f8b25f3a860ac83
                     </article>
                 </aside>
             </div>
