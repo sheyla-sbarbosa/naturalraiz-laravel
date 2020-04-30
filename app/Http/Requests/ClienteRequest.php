@@ -27,18 +27,19 @@ class ClienteRequest extends FormRequest
     {
         return [
             'nome' => 'required',
-            'whatsapp' => 'required',
+            'telefone1' => 'required',
             'email' => 'required',
             'password' => 'required|min:6',
             'endereco1' => 'required',
             'cep1' => 'required',
-            'numero' => 'required',
+            'numero1' => 'required',
         ];
     }
         public function messages()
     {
         return [
             'nome.required' => 'O campo nome é obrigatório.',
+            'telefone1' => 'O campo telefone é obrigatório',
             'email.required' => 'O campo E-mail é obrigatório',
             'email.email' => 'O campo email não está no formato correto',
             'password.required' => 'O campo senha é obrigatório',
@@ -46,7 +47,7 @@ class ClienteRequest extends FormRequest
             'password.confirmed' => 'O campo de confirmação tem que ser igual a senha.',
             'endereco1' => 'O campo endereço é obrigatório',
             'cep1' => 'o campo CEP é obrigatório', 
-            'numero' => 'o numero da sua casa é obrigatório'
+            'numero1' => 'o numero da sua casa é obrigatório'
         ];
     }
 }

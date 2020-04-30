@@ -1,6 +1,18 @@
 
   @extends('layout.inside')
   @section('conteudo')
+  
+  @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
+  
   <body>
   
 
@@ -110,7 +122,7 @@
             <div class="form-group col-md-4">
             <label for="inputNum">Número</label>
             <input name="numero1" type="text" class="form-control" placeholder="Número">
-            @error('numero_1')
+            @error('numero1')
                         <div class="text-danger">{{ $message }}</div>
                     @enderror
           </div>

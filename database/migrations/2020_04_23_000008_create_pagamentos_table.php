@@ -24,21 +24,21 @@ class CreatePagamentosTable extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->enum('pagamento_forma', ['dinheiro', 'débito', 'crédito', 'vale refeição', 'vale-alimentação'])->nullable();
-            $table->unsignedInteger('vendas_id');
+            $table->integer('vendas_id')->unsigned();
             $table->string('soma_vendas', 45)->nullable();
-            $table->unsignedInteger('admin_id');
+            $table->integer('admin_id')->unsigned();
 
-            $table->index(["admin_id"], 'fk_pagamentos_admin1_idx');
+            $table->index(["admin_id"], 'fk_pagamentos_admin_idx');
 
-            $table->index(["vendas_id"], 'fk_Pagamentos_vendas1_idx');
+            $table->index(["vendas_id"], 'fk_Pagamentos_vendas_idx');
 
 
-            $table->foreign('vendas_id', 'fk_Pagamentos_vendas1_idx')
+            $table->foreign('vendas_id', 'fk_Pagamentos_vendas_idx')
                 ->references('id')->on('vendas')
                 ->onDelete('no action')
                 ->onUpdate('no action');
 
-            $table->foreign('admin_id', 'fk_pagamentos_admin1_idx')
+            $table->foreign('admin_id', 'fk_pagamentos_admin_idx')
                 ->references('id')->on('admin')
                 ->onDelete('no action')
                 ->onUpdate('no action');

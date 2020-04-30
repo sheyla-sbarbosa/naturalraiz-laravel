@@ -23,8 +23,8 @@ class CreatePedidosTable extends Migration
         Schema::create($this->tableName, function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id')->nullable();
-            $table->unsignedInteger('cliente_id');
-            $table->unsignedInteger('produto_id');
+            $table->integer('cliente_id')->unsigned();
+            $table->integer('produto_id')->unsigned();
             $table->float('quantidade_produtos')->nullable();
             $table->longText('descricao_produtos')->nullable();
             $table->float('total_pedido')->nullable();
@@ -33,21 +33,21 @@ class CreatePedidosTable extends Migration
             $table->enum('pagamento_formas', ['dinheiro', 'débito', 'crédito', 'vale refeição', 'vale-alimentação'])->nullable();
             $table->enum('status', ['Confirmação do Pedido', 'Em Separação', 'Envio', 'Entregue', 'Cancelado'])->nullable();
             $table->text('descricao_pedidos');
-            $table->unsignedInteger('vendas_id');
+            $table->integer('vendas_id')->unsigned();
 
-            $table->index(["descricao_pedidos"], 'fk_pedidos_Descricao_Pedidos1_idx');
+            $table->index(["descricao_pedidos"], 'fk_pedidos_Descricao_Pedidos_idx');
 
             $table->index(["cliente_id"], 'cliente_idx');
 
-            $table->index(["vendas_id"], 'fk_pedidos_vendas1_idx');
+            $table->index(["vendas_id"], 'fk_pedidos_vendas_idx');
 
 
-            $table->foreign('descricao_pedidos', 'fk_pedidos_Descricao_Pedidos1_idx')
+            $table->foreign('descricao_pedidos', 'fk_pedidos_Descricao_Pedidos_idx')
                 ->references('id')->on('descricao_pedidos')
                 ->onDelete('no action')
                 ->onUpdate('no action');
 
-            $table->foreign('vendas_id', 'fk_pedidos_vendas1_idx')
+            $table->foreign('vendas_id', 'fk_pedidos_vendas_idx')
                 ->references('id')->on('vendas')
                 ->onDelete('no action')
                 ->onUpdate('no action');
