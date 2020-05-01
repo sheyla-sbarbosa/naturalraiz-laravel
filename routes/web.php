@@ -21,8 +21,8 @@ Route::get('empresa','EmpresaController@index');
 Route::get('produto', 'ProdutoController@index');
 
 /*Rotas para cadastro de clientes*/
-Route::get('/cadastroclient', 'ClienteController@create');
-Route::post('/cadastroclient', 'ClienteController@store')->name('cliente.store');
+Route::get('/cadastroclient', 'UserController@create');
+Route::post('/cadastroclient', 'UserController@store')->name('user.store');
 
 /*rotas de login*/
 

@@ -30,13 +30,7 @@ class CreateVendasTable extends Migration
             $table->enum('venda_tipo', ['avulso', 'assinatura'])->nullable();
             $table->integer('descricao_vendas_id')->unsigned();
 
-            $table->index(["descricao_vendas_id"], 'fk_vendas_descricao_vendas_idx');
-
-
-            $table->foreign('descricao_vendas_id', 'fk_vendas_descricao_vendas_idx')
-                ->references('id')->on('descricao_vendas')
-                ->onDelete('no action')
-                ->onUpdate('no action');
+            
         });
     }
 

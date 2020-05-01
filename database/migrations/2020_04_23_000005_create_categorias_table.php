@@ -27,13 +27,7 @@ class CreateCategoriasTable extends Migration
             $table->string('descricao_categoria', 45)->nullable();
             $table->unsignedInteger('produtos_id');
 
-            $table->index(["produtos_id"], 'fk_Categorias_Produtos1_idx');
-
-
-            $table->foreign('produtos_id', 'fk_Categorias_Produtos1_idx')
-                ->references('id')->on('produtos')
-                ->onDelete('no action')
-                ->onUpdate('no action');
+           
         });
     }
 

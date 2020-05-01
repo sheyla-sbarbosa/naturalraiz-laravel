@@ -17,7 +17,7 @@
   
 
   <div class="container mt-5">
-  <form action="{{route ('cliente.store')}}" method="post" enctype="multipart/form-data">
+  <form action="{{route ('user.store')}}" method="post" enctype="multipart/form-data">
   @csrf
 
 
@@ -174,7 +174,7 @@
   <span>&times;</span> </button>
    
   <div class="modal-body">
-  <form action="" method="POST" role="form">
+  <form action="{{route('user.store')}}" method="POST" role="form">
   
   <div class="form-row">
   
