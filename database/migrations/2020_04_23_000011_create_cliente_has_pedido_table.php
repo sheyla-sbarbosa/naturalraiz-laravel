@@ -26,21 +26,8 @@ class CreateClienteHasPedidoTable extends Migration
             $table->integer('pedidos_id');
             $table->integer('pedidos_descricao');
 
-            $table->index(["pedidos_id", "pedidos_descricao"], 'fk_Clientes_has_Pedidos_Pedidos1_idx');
-
-            $table->index(["Clientes_idClientes"], 'fk_Clientes_has_Pedidos_Clientes1_idx');
-
-
-            $table->foreign('Clientes_idClientes', 'fk_Clientes_has_Pedidos_Clientes1_idx')
-                ->references('id')->on('clientes')
-                ->onDelete('no action')
-                ->onUpdate('no action');
-
-            $table->foreign('pedidos_id', 'fk_Clientes_has_Pedidos_Pedidos1_idx')
-                ->references('id')->on('pedidos')
-                ->onDelete('no action')
-                ->onUpdate('no action');
-        });
+           
+         });
     }
 
     /**
