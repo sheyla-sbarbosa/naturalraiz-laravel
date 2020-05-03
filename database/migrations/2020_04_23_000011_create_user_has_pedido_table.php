@@ -4,17 +4,17 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePedidoHasProdutoTable extends Migration
+class CreateClienteHasPedidoTable extends Migration
 {
     /**
      * Schema table name to migrate
      * @var string
      */
-    public $tableName = 'pedido_has_produto';
+    public $tableName = 'user_has_pedido';
 
     /**
      * Run the migrations.
-     * @table pedido_has_produto
+     * @table user_has_pedido
      *
      * @return void
      */
@@ -22,15 +22,17 @@ class CreatePedidoHasProdutoTable extends Migration
     {
         Schema::create($this->tableName, function (Blueprint $table) {
             $table->engine = 'InnoDB';
-            $table->increments('pedidos_id');
-            $table->unsignedInteger('produtos_id');
+            $table->increments('Users_id');
+            $table->integer('pedidos_id');
+            $table->integer('pedidos_descricao');
 
+           
          });
     }
 
     /**
      * Reverse the migrations.
-     *
+     *php
      * @return void
      */
      public function down()

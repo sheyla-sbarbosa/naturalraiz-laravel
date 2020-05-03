@@ -3,19 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Cliente;
 use App\Pedidos;
 use App\Produto;
 use App\Vendas;
+use App\User;
 
-use App\Http\Requests\ClienteRequest;
+use App\Http\Requests\UserRequest;
 
 
-class ClienteController extends Controller
+class UserController extends Controller
 {
     
     public function index() {
-        $novocliente = Cadastroclient::paginate();
+        $novocliente = User::paginate();
         return view('cadastroclient');
     }
 
@@ -28,13 +28,13 @@ class ClienteController extends Controller
     {return view('cadastroclient');}
 
 
-    public function store(ClienteRequest $request) {
+    public function store(UserRequest $request) {
         
-        $novocliente = new Cliente();
+        $novocliente = new User();
         $novocliente -> nome = $request-> nome;
         $novocliente -> telefone1 = $request-> whatsapp;
         $novocliente -> telefone2 = $request-> telefone;
-        $novocliente -> email = $request-> e-mail;
+        $novocliente -> email = $request-> email;
         $novocliente -> password = $request-> senha;
         $novocliente -> endereco1 = $request-> endereço;
         $novocliente -> cep1 = $request-> cep;
@@ -46,7 +46,7 @@ class ClienteController extends Controller
         $novocliente -> bairro2 = $request-> bairro_opcional;
         $novocliente -> numero2 = $request-> numero_opcional;
         $novocliente -> complemento2 = $request-> complemento_opcional;
-        $novocliente -> fill($novocliente)->save();
+        $novocliente ->save();
 
 
 

@@ -14,20 +14,20 @@ use Illuminate\Support\Facades\Route;
 */  
 
 /* rota home */
-Route::get('/','HomeController@index');
+Route::get('/home','HomeController@index');
 /*rota empresa */
 Route::get('empresa','EmpresaController@index');
 /* rota produto */
 Route::get('produto', 'ProdutoController@index');
 
 /*Rotas para cadastro de clientes*/
-Route::get('/cadastroclient', 'ClienteController@create');
-Route::post('/cadastroclient', 'ClienteController@store')->name('cliente.store');
+Route::get('/cadastroclient', 'UserController@create');
+Route::post('/cadastroclient', 'UserController@store')->name('user.store');
 
 /*rotas de login*/
 
 route::get('/loginclient', 'AuthController@loginClient');
-route::get('/admin', 'AuthController@administracao');
+route::get('/admin', 'AuthController@admin');
 
 /*rota carrinho */ 
 Route::get('/carrinho2', 'CarrinhoController@mostrarCarrinho');

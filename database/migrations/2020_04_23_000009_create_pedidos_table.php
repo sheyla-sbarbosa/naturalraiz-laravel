@@ -35,7 +35,8 @@ class CreatePedidosTable extends Migration
             $table->text('descricao_pedidos');
             $table->integer('vendas_id')->unsigned();
 
-        });
+           });
+    
     }
 
     /**

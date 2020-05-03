@@ -30,7 +30,7 @@ class CreateAdminTable extends Migration
             $table->float('quantidade_produtos')->nullable();
             $table->date('data_venda')->nullable();
             $table->date('data_entrega')->nullable();
-            $table->unsignedInteger('id_cliente')->nullable();
+            $table->unsignedInteger('id_user')->nullable();
         });
     }
 
