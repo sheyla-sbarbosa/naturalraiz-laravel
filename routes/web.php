@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */  
 
 /* rota home */
-Route::get('/','HomeController@index');
+Route::get('/home','HomeController@index');
 /*rota empresa */
 Route::get('empresa','EmpresaController@index');
 /* rota produto */
@@ -27,13 +27,17 @@ Route::post('/cadastroclient', 'UserController@store')->name('user.store');
 /*rotas de login*/
 
 route::get('/loginclient', 'AuthController@loginClient');
-route::get('/admin', 'AuthController@administracao');
+route::get('/admin', 'AuthController@admin');
 
 /*rota carrinho */ 
 Route::get('/carrinho2', 'CarrinhoController@mostrarCarrinho');
 
 /*rota favoritos */
 Route::get('/favoritos', 'FavoritosController@listaFavoritos');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
