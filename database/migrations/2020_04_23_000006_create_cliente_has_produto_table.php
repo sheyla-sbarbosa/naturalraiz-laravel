@@ -25,20 +25,7 @@ class CreateClienteHasProdutoTable extends Migration
             $table->integer('clientes_id')->unsigned();
             $table->integer('produto_id')->unsigned();
 
-            $table->index(["clientes_id"], 'fk_Clientes_has_Produto_Clientes_idx');
-
-            $table->index(["produto_id"], 'fk_Clientes_has_Produto_Produto_idx');
-
-
-            $table->foreign('clientes_id', 'fk_Clientes_has_Produto_Clientes_idx')
-                ->references('id')->on('clientes')
-                ->onDelete('no action')
-                ->onUpdate('no action');
-
-            $table->foreign('produto_id', 'fk_Clientes_has_Produto_Produto_idx')
-                ->references('id')->on('produtos')
-                ->onDelete('no action')
-                ->onUpdate('no action');
+            
         });
     }
 

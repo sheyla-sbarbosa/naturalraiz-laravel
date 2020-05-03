@@ -28,20 +28,7 @@ class CreatePagamentosTable extends Migration
             $table->string('soma_vendas', 45)->nullable();
             $table->integer('admin_id')->unsigned();
 
-            $table->index(["admin_id"], 'fk_pagamentos_admin_idx');
-
-            $table->index(["vendas_id"], 'fk_Pagamentos_vendas_idx');
-
-
-            $table->foreign('vendas_id', 'fk_Pagamentos_vendas_idx')
-                ->references('id')->on('vendas')
-                ->onDelete('no action')
-                ->onUpdate('no action');
-
-            $table->foreign('admin_id', 'fk_pagamentos_admin_idx')
-                ->references('id')->on('admin')
-                ->onDelete('no action')
-                ->onUpdate('no action');
+            
         });
     }
 

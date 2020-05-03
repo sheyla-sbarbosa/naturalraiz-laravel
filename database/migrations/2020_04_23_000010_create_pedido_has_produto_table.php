@@ -25,20 +25,7 @@ class CreatePedidoHasProdutoTable extends Migration
             $table->increments('pedidos_id');
             $table->unsignedInteger('produtos_id');
 
-            $table->index(["produtos_id"], 'fk_Pedidos_has_Produtos_Produtos1_idx');
-
-            $table->index(["pedidos_id"], 'fk_Pedidos_has_Produtos_Pedidos1_idx');
-
-
-            $table->foreign('pedidos_id', 'fk_Pedidos_has_Produtos_Pedidos1_idx')
-                ->references('id')->on('pedidos')
-                ->onDelete('no action')
-                ->onUpdate('no action');
-
-            $table->foreign('produtos_id', 'fk_Pedidos_has_Produtos_Produtos1_idx')
-                ->references('id')->on('produtos')
-                ->onDelete('no action')
-                ->onUpdate('no action');
+            
         });
     }
 

@@ -35,27 +35,6 @@ class CreatePedidosTable extends Migration
             $table->text('descricao_pedidos');
             $table->integer('vendas_id')->unsigned();
 
-            $table->index(["descricao_pedidos"], 'fk_pedidos_Descricao_Pedidos_idx');
-
-            $table->index(["cliente_id"], 'cliente_idx');
-
-            $table->index(["vendas_id"], 'fk_pedidos_vendas_idx');
-
-
-            $table->foreign('descricao_pedidos', 'fk_pedidos_Descricao_Pedidos_idx')
-                ->references('id')->on('descricao_pedidos')
-                ->onDelete('no action')
-                ->onUpdate('no action');
-
-            $table->foreign('vendas_id', 'fk_pedidos_vendas_idx')
-                ->references('id')->on('vendas')
-                ->onDelete('no action')
-                ->onUpdate('no action');
-
-            $table->foreign('cliente_id', 'cliente_idx')
-                ->references('id')->on('clientes')
-                ->onDelete('no action')
-                ->onUpdate('no action');
         });
     }
 
