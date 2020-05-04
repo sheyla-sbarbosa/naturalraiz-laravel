@@ -22,7 +22,7 @@ class CreateClienteHasPedidoTable extends Migration
     {
         Schema::create($this->tableName, function (Blueprint $table) {
             $table->engine = 'InnoDB';
-            $table->increments('Users_id');
+            $table->increments('User_id');
             $table->integer('pedidos_id');
             $table->integer('pedidos_descricao');
 
