@@ -19,6 +19,7 @@ Route::get('/home','HomeController@index');
 Route::get('empresa','EmpresaController@index');
 /* rota produto */
 Route::get('produto', 'ProdutoController@index');
+Route::post('produto', 'ProdutoController@store')->name('produto.store');
 
 /*Rotas para cadastro de clientes*/
 Route::get('/cadastroclient', 'UserController@create');
@@ -27,7 +28,7 @@ Route::post('/cadastroclient', 'UserController@store')->name('user.store');
 /*rotas de login*/
 
 route::get('/loginclient', 'AuthController@loginClient');
-route::get('/admin', 'AuthController@admin');
+route::get('/admin', 'AdminController@admin');
 
 /*rota carrinho */ 
 Route::get('/carrinho2', 'CarrinhoController@mostrarCarrinho');

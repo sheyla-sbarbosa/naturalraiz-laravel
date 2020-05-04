@@ -7,8 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Produto extends Model
 {
-    public function cadastroclient ()
+    public function pedido ()
     {
-        return $this->belongsToMany(Cadastroclient::class);
+        return $this->belongsToMany(Pedido::class);
     }
+
+    public function categoria ()
+    {
+        return $this->belongsTo(CategoriaProduto::class);
+    }
+
+
 }
