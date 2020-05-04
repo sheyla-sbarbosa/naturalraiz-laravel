@@ -34,3 +34,25 @@ Route::get('/carrinho2', 'CarrinhoController@mostrarCarrinho');
 
 /*rota favoritos */
 Route::get('/favoritos', 'FavoritosController@listaFavoritos');
+
+
+Route::get('/model', function () {
+    
+
+    /* $user = \App\User::create([
+        'nome' => 'adriana silva',
+        'email' => 'adrianasilva@hotmail.com',
+        'password' => bcrypt('1234567899')
+
+    ]); */
+    /*
+    $user = \App\User::find(8);
+    $user = $user->update([
+        'nome' => 'Atualizando com MassUpdate'
+    ]); //true ou false
+
+    dd($user);
+*/
+
+    return \App\User::all();
+} );

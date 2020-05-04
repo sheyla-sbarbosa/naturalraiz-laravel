@@ -24,7 +24,7 @@ class CreateUsersTable extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('nome', 250)->nullable();
-            $table->string('endereco1', 250);
+            $table->string('endereco1', 250)->nullable();
             $table->integer('cep1');
             $table->string('numero1', 45)->nullable();
             $table->string('complemento_1')->nullable();
