@@ -79,32 +79,8 @@
                                     
                                 </div>
                                 <hr>
-                                <div class="col-sm-4 mt-3" >
-                                   
-                                    <a href="/carrinho2" class="btn btn-outline-success btn btn-cart d-inline-block"
-                                        style="height: 38px; padding: 10px;">Adicionar</a>
-                                    </div>
-
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <div class="contact-form-style mb-20" >
-                                            <input name="subject" placeholder="Informe sua preferência. Ex: tomates maduros, bananas verdes.." type="text" style="width: 600px; height: 50px; border: 0.5px  solid  grey;" >
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="container">
-                                    <div class="col-sm-4">
-                                        <a href="#" class="btn btn-outline-success btn  btn-cart mt-4"
-                                            style="height: 38px; padding: 10px; width: 190px;">Continuar comprando</a>   
-                                       </div>   
-                                    
-                                </div>
-
-                                
-            
-                                
-                                
+                                <a href="/carrinho2" class="btn btn-outline-success btn d-inline-block"
+                                    style="height: 40px;">Adicionar</a>
                     </article>
                 </aside>
             </div>

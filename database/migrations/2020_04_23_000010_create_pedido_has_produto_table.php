@@ -25,7 +25,7 @@ class CreatePedidoHasProdutoTable extends Migration
             $table->increments('pedidos_id');
             $table->unsignedInteger('produtos_id');
 
-                });
+         });
     }
 
     /**

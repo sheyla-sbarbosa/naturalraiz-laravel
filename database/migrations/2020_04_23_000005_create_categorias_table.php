@@ -26,9 +26,8 @@ class CreateCategoriasTable extends Migration
             $table->enum('categoria', ['Frutas', 'Legumes', 'Verduras', 'Ervas/Chás', 'Temperos'])->nullable();
             $table->string('descricao_categoria', 45)->nullable();
             $table->unsignedInteger('produtos_id');
-
-           
-        });
+      }); 
+    
     }
 
     /**

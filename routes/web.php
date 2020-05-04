@@ -34,10 +34,3 @@ Route::get('/carrinho2', 'CarrinhoController@mostrarCarrinho');
 
 /*rota favoritos */
 Route::get('/favoritos', 'FavoritosController@listaFavoritos');
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
