@@ -27,7 +27,7 @@ Route::post('/cadastroclient', 'UserController@store')->name('user.store');
 
 /*rotas de login*/
 
-route::get('/loginclient', 'AuthController@loginClient');
+route::get('/loginclient', 'LoginController@loginClient');
 route::get('/admin', 'AdminController@admin');
 
 /*rota carrinho */ 

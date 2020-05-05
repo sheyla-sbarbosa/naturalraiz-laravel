@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+use App\Produto;
 use App\Pedidos;
 use App\Vendas;
 use App\User;
 
+use Illuminate\Http\Request\ProdutoRequest;
 class ProdutoController extends Controller
 {
     public  function index() {
