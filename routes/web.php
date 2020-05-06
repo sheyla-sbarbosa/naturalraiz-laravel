@@ -55,5 +55,5 @@ Route::get('/model', function () {
     dd($user);
 */
 
-    return \App\User::all();
+    //return \App\User::all();
 } );
