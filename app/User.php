@@ -38,9 +38,11 @@ class User extends Authenticatable
     ];
 
 
-
     
-        public function RegisterController ()
-        { return $this-> hasOne (Cliente::class);}
+    public function RegisterController (){ 
+        
+        return $this-> hasOne (Cliente::class);
+    
+    }
     
 }

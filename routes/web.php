@@ -39,12 +39,12 @@ Route::get('/favoritos', 'FavoritosController@listaFavoritos');
 Route::get('/model', function () {
     
 
-    /* $user = \App\User::create([
+     $user = \App\User::create([
         'nome' => 'adriana silva',
         'email' => 'adrianasilva@hotmail.com',
         'password' => bcrypt('1234567899')
 
-    ]); */
+    ]);
     /*
     $user = \App\User::find(8);
     $user = $user->update([
@@ -54,5 +54,7 @@ Route::get('/model', function () {
     dd($user);
 */
 
-    return \App\User::all();
+    //return \App\User::all();
+
+
 } );
