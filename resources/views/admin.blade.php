@@ -12,7 +12,6 @@
 @endif
 
   <body>
-  <br>
   
   <div class="container mt-5 mb-5">
     <h1>Adicionar Produtos</h1>
@@ -21,16 +20,16 @@
     <div class="form-row">
     <div class="form-group col-md-6">
       <label for="nomeProduto">Nome </label>
-      <input type="text" name="nomeProduto" class="form-control" id="nomeProduto" required>
-      @error('numero1nomeProduto')
+      <input type="text" name="nome" class="form-control" id="nomeProduto" required>
+      @error('nome')
       <div class="text-danger">{{ $message }}</div>
                     @enderror
     </div>
 
     <div class="form-group col-md-6">
-      <label for="valorProduto">Valor_unitário</label>
-      <input type="float" name="valorProduto" class="form-control" id="valorProduto" required>
-      @error('valorProduto')
+      <label for="valorProduto">Valor</label>
+      <input type="float" name="valor_unitario" class="form-control" id="valor_unitario" required>
+      @error('valor_unitario')
                         <div class="text-danger">{{ $message }}</div>
                     @enderror
     </div>
@@ -38,8 +37,8 @@
     <div class="form-row">
     <div class="form-group col-md-4">
       <label for="estoqueProduto">Estoque disponível</label>
-      <input type="text" name="estoqueProduto" class="form-control" id="estoque" required>
-      @error('estoqueProduto')
+      <input type="text" name="estoque" class="form-control" id="estoque" required>
+      @error('estoque')
                         <div class="text-danger">{{ $message }}</div>
                     @enderror
     </div>
@@ -49,34 +48,36 @@
       <input type="float" name="avaliacaoProduto" class="form-control" id="avaliacao">
     </div>
 
+
     <div class="form-group col-md-4">
-      <label for="avaliacaoProduto">Categorias </label>
-      <select name="Produtos" id="categoriaProdutos"> Categorias 
-      <br> </br>
-      <option value="" name=""> Selecione </option>
-      <option value="Ervas/Chás" name="ervas"> Ervas/Chás </option>
-      <option value="Fruta" name="fruta"> Frutas </option>
-      <option value="Legume" name="legume"> Legume </option>
-      <option value="Verdura" name="verdura"> Verdura </option>
-      <option value="Temperos" name="temperos"> Temperos </option>
-      
-      
-      </select>
+    <label for="exampleFormControlSelect1">Categoria</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>Selecione</option>
+      <option>Ervas/Chás</option>
+      <option>Frutas</option>
+      <option>Legumes</option>
+      <option>Verduras</option>
+      <option>Temperos</option>
+    </select>
     </div>
-    
+
+
     <div class="form-group col-md-12">
     <label for="descricaoProduto">Descrição</label>
     <textarea class="form-control" name="descricaoProduto" id="descricaoProduto" rows="3"></textarea>
   </div>
   
 
-  <div class="custom-file">
+  <div class="custom-file" class="form-group col-md-12">
     <input type="file" class="custom-file-input" id="validatedCustomFile">
     <label class="custom-file-label" for="validatedCustomFile">Escolher arquivo...</label>
     <div class="invalid-feedback">Exemplo de feedback inválido para input file</div>
   </div>
 
-<br> </br>
+  </div>
+
+
+
 <div class="container">
  <div class="form-row">
   <div class="col-md-4">
@@ -91,12 +92,13 @@
 
   </div>
   </div>
+  <br> 
+<br>
 
   </form>
   </div>
 
-<br> </br>
-<br>
+
 
 
 @endsection
