@@ -12,17 +12,26 @@
     <div class="form-group col-md-6">
       <label for="nomeProduto">Nome </label>
       <input type="text" name="nomeProduto" class="form-control" id="nomeProduto" required>
+      @error('numero1nomeProduto')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
     </div>
 
     <div class="form-group col-md-6">
       <label for="valorProduto">Valor_unitário</label>
       <input type="float" name="valorProduto" class="form-control" id="valorProduto" required>
+      @error('valorProduto')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
     </div>
 
     <div class="form-row">
     <div class="form-group col-md-6">
       <label for="estoqueProduto">Estoque disponível</label>
       <input type="text" name="estoqueProduto" class="form-control" id="estoque" required>
+      @error('estoqueProduto')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
     </div>
 
     <div class="form-group col-md-6">
