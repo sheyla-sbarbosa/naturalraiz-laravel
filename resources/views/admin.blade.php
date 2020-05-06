@@ -1,6 +1,16 @@
 @extends('layout.inside')
 @section('conteudo')
 
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
   <body>
   <br>
   
@@ -13,7 +23,7 @@
       <label for="nomeProduto">Nome </label>
       <input type="text" name="nomeProduto" class="form-control" id="nomeProduto" required>
       @error('numero1nomeProduto')
-                        <div class="text-danger">{{ $message }}</div>
+      <div class="text-danger">{{ $message }}</div>
                     @enderror
     </div>
 
@@ -26,7 +36,7 @@
     </div>
 
     <div class="form-row">
-    <div class="form-group col-md-6">
+    <div class="form-group col-md-4">
       <label for="estoqueProduto">Estoque disponível</label>
       <input type="text" name="estoqueProduto" class="form-control" id="estoque" required>
       @error('estoqueProduto')
@@ -34,9 +44,24 @@
                     @enderror
     </div>
 
-    <div class="form-group col-md-6">
+    <div class="form-group col-md-4">
       <label for="avaliacaoProduto">Avaliação</label>
       <input type="float" name="avaliacaoProduto" class="form-control" id="avaliacao">
+    </div>
+
+    <div class="form-group col-md-4">
+      <label for="avaliacaoProduto">Categorias </label>
+      <select name="Produtos" id="categoriaProdutos"> Categorias 
+      <br> </br>
+      <option value="" name=""> Selecione </option>
+      <option value="Ervas/Chás" name="ervas"> Ervas/Chás </option>
+      <option value="Fruta" name="fruta"> Frutas </option>
+      <option value="Legume" name="legume"> Legume </option>
+      <option value="Verdura" name="verdura"> Verdura </option>
+      <option value="Temperos" name="temperos"> Temperos </option>
+      
+      
+      </select>
     </div>
     
     <div class="form-group col-md-12">

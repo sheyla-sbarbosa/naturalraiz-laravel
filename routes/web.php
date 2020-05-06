@@ -25,9 +25,10 @@ Route::post('produto', 'ProdutoController@store')->name('produto.store');
 Route::get('/cadastroclient', 'UserController@create');
 Route::post('/cadastroclient', 'UserController@store')->name('user.store');
 
+
 /*rotas de login*/
 
-// route::get('/loginclient', 'AuthController@loginClient');
+route::get('/loginclient', 'UserController@loginClient');
 route::get('/administracao', 'AdminController@admin');
 
 //Route::auth();

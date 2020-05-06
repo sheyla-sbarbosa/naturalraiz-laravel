@@ -16,7 +16,12 @@ class UserController extends Controller
     
     public function index() {
         $novocliente = User::paginate();
-        return view('cadastroclient');
+        return view('loginclient');
+    }
+
+    public function show() {
+        $novocliente = User::paginate();
+        return view('loginclient');
     }
 
     public function create() {
@@ -40,7 +45,7 @@ class UserController extends Controller
         $novocliente -> cep1 = $request-> cep;
         $novocliente -> bairro1 = $request-> bairro;
         $novocliente -> numero1 = $request-> numero;
-        $novocliente -> complemento1 = $request-> complemento;
+        $novocliente -> complemento_1 = $request-> complemento;
         $novocliente -> endereco2 = $request-> endereco_opcional;
         $novocliente -> cep2 = $request-> cep_opcional;
         $novocliente -> bairro2 = $request-> bairro_opcional;
@@ -50,7 +55,7 @@ class UserController extends Controller
 
 
 
-        return redirect('./home')
+        return redirect('./')
             ->with('mensagem', 'Cadastro realizado com sucesso');
     }     
 }

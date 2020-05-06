@@ -46,7 +46,7 @@
           <div class="form-group col-md-6">
           <label for="inputFone">Telefone com WhatsApp</label>
           <input name="telefone1" type="tel" class="form-control" id="telefone" data-js="phone" placeholder="WhatsApp" >
-          @error('whatsapp')
+          @error('telefone1')
                         <div class="text-danger">{{ $message }}</div>
                     @enderror
 </div> 
