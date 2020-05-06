@@ -19,7 +19,9 @@ class Cliente extends Model
     ];
 
     public function RegisterController ()
-    { return $this-> belongsTo (User::class);} 
+    { 
+        return $this-> belongsTo(User::class);
+    } 
 
     public function produtos () 
     {

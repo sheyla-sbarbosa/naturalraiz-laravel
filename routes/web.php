@@ -11,10 +11,10 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/  
+*/
 
 /* rota home */
-Route::get('/home','HomeController@index');
+Route::get('/','HomeController@index');
 /*rota empresa */
 Route::get('empresa','EmpresaController@index');
 /* rota produto */
@@ -25,12 +25,15 @@ Route::post('produto', 'ProdutoController@store')->name('produto.store');
 Route::get('/cadastroclient', 'UserController@create');
 Route::post('/cadastroclient', 'UserController@store')->name('user.store');
 
+
 /*rotas de login*/
 
-route::get('/loginclient', 'AuthController@loginClient');
-route::get('/admin', 'AdminController@admin');
+route::get('/loginclient', 'UserController@loginClient');
+route::get('/administracao', 'AdminController@admin');
 
-/*rota carrinho */ 
+//Route::auth();
+
+/*rota carrinho */
 Route::get('/carrinho2', 'CarrinhoController@mostrarCarrinho');
 
 /*rota favoritos */
@@ -38,14 +41,14 @@ Route::get('/favoritos', 'FavoritosController@listaFavoritos');
 
 
 Route::get('/model', function () {
-    
 
-    /* $user = \App\User::create([
+
+     $user = \App\User::create([
         'nome' => 'adriana silva',
         'email' => 'adrianasilva@hotmail.com',
         'password' => bcrypt('1234567899')
 
-    ]); */
+    ]);
     /*
     $user = \App\User::find(8);
     $user = $user->update([
@@ -56,4 +59,6 @@ Route::get('/model', function () {
 */
 
     //return \App\User::all();
+
+
 } );

@@ -24,7 +24,7 @@ class CreateProdutosTable extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('nome', 45);
-            $table->float('valor_unitário');
+            $table->float('valor_unitario');
             $table->longText('descricao_produto')->nullable();
             $table->float('estoque')->nullable();
             $table->binary('imagem')->nullable();

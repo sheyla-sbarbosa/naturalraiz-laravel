@@ -45,15 +45,15 @@
         <div class="form-row">
           <div class="form-group col-md-6">
           <label for="inputFone">Telefone com WhatsApp</label>
-          <input name="telefone1" type="tel" class="form-control" id="inputFone" data-js="phone" placeholder="WhatsApp" >
-          @error('whatsapp')
+          <input name="telefone1" type="tel" class="form-control" id="telefone" data-js="phone" placeholder="WhatsApp" >
+          @error('telefone1')
                         <div class="text-danger">{{ $message }}</div>
                     @enderror
 </div> 
 
           <div class="form-group col-md-6">
           <label for="inputFone" class="control-label">Telefone de recado</label>
-          <input name="telefone2" type="tel" class="form-control" id="inputFone" placeholder="Telefone">
+          <input name="telefone2" type="tel" class="form-control" id="telefone" placeholder="Telefone">
   </div>
 </div>
 
@@ -90,8 +90,8 @@
 
               <div class="form-group col-12">
                 <label for="inputAddress">Endereço</label>
-                <input name="endereco1" type="text" class="form-control" id="inputAddress" placeholder="Digite seu endereço" required>
-                @error('endereco_1')
+                <input name="endereco1" type="text" class="form-control" id="endereco" placeholder="Digite seu endereço" required>
+                @error('endereco1')
                         <div class="text-danger">{{ $message }}</div>
                     @enderror
               </div>
@@ -99,15 +99,15 @@
 
             <div class="form-group col-md-6">
               <label for="inputCEP">CEP</label>
-              <input name="cep1" type="text" class="form-control" id="inputCEP">
-              @error('cep_1')
+              <input name="cep1" type="text" class="form-control" id="cep">
+              @error('cep1')
                         <div class="text-danger">{{ $message }}</div>
                     @enderror
             </div>
 
             <div class="form-group col-md-6">
               <label for="inputBairro">Bairro</label>
-              <input name="bairro1" type="text" class="form-control" placeholder="Bairro">
+              <input name="bairro1" type="text" class="form-control" id="bairro" placeholder="Bairro">
               @error('bairro_1')
                         <div class="text-danger">{{ $message }}</div>
                     @enderror
@@ -181,20 +181,20 @@
   
     <div class="form-group col-12">
       <label for="endereço opcional">Endereço</label>
-      <input name="endereco2" type="text" class="form-control" id="inputAddress" placeholder="Digite seu endereço">
+      <input name="endereco2" type="text" class="form-control" id="endereco" placeholder="Digite seu endereço">
     
     </div>
   
   
   <div class="form-group col-md-6">
     <label for="inputCEP">CEP</label>
-    <input name="cep2" type="text" class="form-control" id="inputCEP">
+    <input name="cep2" type="text" class="form-control" id="cep">
     
   </div>
   
   <div class="form-group col-md-6">
     <label for="inputBairro">Bairro</label>
-    <input name="bairro2" type="text" class="form-control" placeholder="Bairro">
+    <input name="bairro2" type="text" class="form-control" id="bairro" placeholder="Bairro">
     
   </div>
   </div>
@@ -236,5 +236,9 @@
 </div>
 
 </div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
 
 @endsection

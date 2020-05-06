@@ -4,15 +4,35 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
+<<<<<<< HEAD:database/migrations/2020_04_23_00002-1_create_cliente_table.php
 class CreateClienteTable extends Migration
+=======
+class   CreateClientesTable  extends Migration
+
+>>>>>>> ac9c20693bf25482ee2db7ad719204aec8d35414:database/migrations/2020_04_23_00002-1_create_clientes_table.php
 {
+    /**
+     * Schema table name to migrate
+     * @var string
+     */
+    public $tableName = 'clientes';
+
+
+
+
+
     /**
      * Run the migrations.
      *
      * @return void
      */
     public function up()
+
     {
+
+        Schema::create($this->tableName, function (Blueprint $table) {
+
+        
         $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('nome', 250)->nullable();
@@ -37,14 +57,17 @@ class CreateClienteTable extends Migration
             $table->string('password');      
             $table->rememberToken(); 
             $table->timestamps();
+        });
     }
 
-    /**
+    /*
      * Reverse the migrations.
      *
      * @return void
      */
+
     public function down()
+
     {
         //
     }

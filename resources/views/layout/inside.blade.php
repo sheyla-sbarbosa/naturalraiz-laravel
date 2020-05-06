@@ -34,7 +34,7 @@
         <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active ">
-                    <a class="nav-link" style="color: white;" href="#">Home <span class="sr-only">(página atual)</span></a>
+                    <a class="nav-link" style="color: white;" href="administracao">Home <span class="sr-only">(página atual)</span></a>
                 </li> 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" style="color: white;" href="#" id="navbarDropdown" role="button"
