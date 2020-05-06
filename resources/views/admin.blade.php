@@ -4,7 +4,7 @@
   <body>
   <br>
   
-  <div class="container">
+  <div class="container mt-5 mb-5">
     <h1>Adicionar Produtos</h1>
     <form method="post" action="{{route ('produto.store')}}"">
     @csrf
@@ -43,8 +43,8 @@
   </div>
 
 <br> </br>
-
- <div class="row">
+<div class="container">
+ <div class="form-row">
   <div class="col-md-4">
   <button  type="submit" class="btn btn-primary btn-lg btn-block">Adicionar</button>
   </div>
@@ -56,9 +56,13 @@
   </div>
 
   </div>
+  </div>
 
   </form>
   </div>
 
+<br> </br>
 <br>
-  @endsection
+
+
+@endsection

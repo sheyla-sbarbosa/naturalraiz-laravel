@@ -8,6 +8,7 @@ use App\Vendas;
 use App\User;
 
 use Illuminate\Http\Request\ProdutoRequest;
+
 class ProdutoController extends Controller
 {
     public  function index() {
