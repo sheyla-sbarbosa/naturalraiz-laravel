@@ -28,7 +28,7 @@ class ProdutoRequest extends FormRequest
             'nome' => 'required',
             'valorProduto' => 'required',
             'estoqueProduto' => 'required',
-            ''
+            
         ];
     }
 
