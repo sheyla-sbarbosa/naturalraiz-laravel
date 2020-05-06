@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Http\Requests\ProdutoRequest as RequestsProdutoRequest;
 use Illuminate\Http\Request;
 use App\CategoriaProduto;
 use App\Produto;
@@ -16,6 +18,7 @@ class ProdutoController extends Controller
         return view('produto');
     }
 
+<<<<<<< HEAD
     public  function store(ProdutoRequest $request) {
     $data = $request->all();
     $novoproduto = new Produto();
@@ -23,6 +26,12 @@ class ProdutoController extends Controller
 
 
     /*$novoProduto -> nome = $request-> nome;
+=======
+    public  function store(RequestsProdutoRequest $request) {
+
+    $novoProduto = new Produto();
+    $novoProduto -> nome = $request-> nome;
+>>>>>>> 28ec93d6f5a787635a9eb4ed4e5dac284605e327
     $novoProduto -> valorProduto = $request-> valorProduto;
     $novoProduto -> estoqueProduto = $request-> estoqueProduto;
     $novoProduto -> avaliacaoProduto = $request-> avaliacaoProduto;
