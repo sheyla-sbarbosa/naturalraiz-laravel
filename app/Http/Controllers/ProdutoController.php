@@ -14,7 +14,10 @@ use App\User;
 class ProdutoController extends Controller
 {
     public  function index() {
-        return view('produto');
+
+        $produtos = \App\Produto::paginate(5) ;
+
+        return view('home', compact('produtos'));
     }
 
     public function verduras () 
@@ -48,10 +51,14 @@ class ProdutoController extends Controller
     
    
 
-    return redirect('./')
-        ->with('mensagem', 'Cadastro realizado com sucesso');
+        $produto = \App\Produto::find($produto);
 
+        return view('editarproduto', compact('produto'));
     }
+
+    public function update(Request $request, $produto) {
+
+      
+    }
+
 }     
-
-

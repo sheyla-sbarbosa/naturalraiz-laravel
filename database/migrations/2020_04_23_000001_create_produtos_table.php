@@ -29,6 +29,7 @@ class CreateProdutosTable extends Migration
             $table->float('estoque')->nullable();
             $table->binary('imagem')->nullable();
             $table->text('comentarios')->nullable();
+            $table->timestamps();
         });
     }
 
