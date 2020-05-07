@@ -14,28 +14,35 @@ use App\User;
 class ProdutoController extends Controller
 {
     public  function index() {
-        return view('produto');
+
+        $produtos = \App\Produto::paginate(5) ;
+
+        return view('home', compact('produtos'));
     }
 
-    public  function store(ProdutoRequest $request) {
-    $data = $request->all();
-    $novoproduto = new Produto();
-    $novoproduto-> fill($data)->save();
+    public function create() {
+        return view('admin');
+    }
 
+    public function store(Request $request) {
+      $data = $request->all();
+      $novoproduto = new Produto();
+      $novoproduto-> fill($data)->save();
 
-    /*$novoProduto -> nome = $request-> nome;
-    $novoProduto -> valorProduto = $request-> valorProduto;
-    $novoProduto -> estoqueProduto = $request-> estoqueProduto;
-    $novoProduto -> avaliacaoProduto = $request-> avaliacaoProduto;
-    $novoProduto -> descricaoProduto = $request-> descricaoProduto;
-
-    $novoProduto ->save();
-   */
-
-    return redirect('./')
-        ->with('mensagem', 'Cadastro realizado com sucesso');
+      return  $novoproduto;
 
     }
+
+    public function edit($produto) {
+
+        $produto = \App\Produto::find($produto);
+
+        return view('editarproduto', compact('produto'));
+    }
+
+    public function update(Request $request, $produto) {
+
+      
+    }
+
 }     
-
-
