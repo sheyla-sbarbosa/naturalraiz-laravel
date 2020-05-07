@@ -17,20 +17,36 @@ class ProdutoController extends Controller
         return view('produto');
     }
 
+    public function verduras () 
+        { return view('verduras');
+
+    }
+
+    public function fruta () 
+        { return view('fruta');
+
+    }
+
+    public function legume () 
+        { return view('legume');
+
+    }
+
+    public function tempero () 
+        { return view('tempero');
+
+    }
+
     public  function store(ProdutoRequest $request) {
-    $data = $request->all();
     $novoproduto = new Produto();
-    $novoproduto-> fill($data)->save();
-
-
-    /*$novoProduto -> nome = $request-> nome;
-    $novoProduto -> valorProduto = $request-> valorProduto;
-    $novoProduto -> estoqueProduto = $request-> estoqueProduto;
+    $novoProduto -> nomeProduto = $request-> nome;
+    $novoProduto -> valor_unitario= $request-> valor;
+    $novoProduto -> estoqueProduto = $request-> estoque;
     $novoProduto -> avaliacaoProduto = $request-> avaliacaoProduto;
-    $novoProduto -> descricaoProduto = $request-> descricaoProduto;
-
+    $novoProduto -> descricaoProduto = $request-> comentarios;
     $novoProduto ->save();
-   */
+    
+   
 
     return redirect('./')
         ->with('mensagem', 'Cadastro realizado com sucesso');

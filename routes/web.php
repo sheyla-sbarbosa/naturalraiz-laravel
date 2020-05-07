@@ -20,6 +20,10 @@ Route::get('empresa','EmpresaController@index');
 /* rota produto */
 Route::get('produto', 'ProdutoController@index');
 Route::post('produto', 'ProdutoController@store')->name('produto.store');
+route::get('verduras', 'ProdutoController@verduras');
+route::get('fruta', 'ProdutoController@fruta');
+route::get('legume', 'ProdutoController@legume');
+route::get('tempero', 'ProdutoController@tempero');
 
 /*Rotas para cadastro de clientes*/
 Route::get('/cadastroclient', 'UserController@create');

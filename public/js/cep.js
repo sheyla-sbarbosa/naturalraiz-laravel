@@ -7,11 +7,11 @@ cep.onkeyup = async (event)=>{
 
     if(cep.value.length == 8){
         
-        let resposta = await fetch(`https://viacep.com.br/ws/${$('#cep.').cleanVal}/json/`)
+        let resposta = await fetch(`https://viacep.com.br/ws/${cep.value}/json/`)
         let dadosDoCep = await resposta.json()
         
         
-        endereco.value = dadosDoCep.endereco
+        endereco.value = dadosDoCep.logradouro
         bairro.value = dadosDoCep.bairro
        
     }
