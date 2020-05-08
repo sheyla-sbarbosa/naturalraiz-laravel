@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Carrinho;
+use App\Produto;
+use Session;
 
 class CarrinhoController extends Controller
 {
