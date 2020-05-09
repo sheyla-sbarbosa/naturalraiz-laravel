@@ -19,6 +19,11 @@ class UserController extends Controller
         return view('loginclient');
     }
 
+    public function loginclient() {
+        return view('loginclient');
+    }
+
+
     public function show() {
         $novocliente = User::paginate();
         return view('loginclient');

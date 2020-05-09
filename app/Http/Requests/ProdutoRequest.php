@@ -24,10 +24,9 @@ class ProdutoRequest extends FormRequest
     public function rules()
     {
         return [
-            
             'nome' => 'required',
-            'valorProduto' => 'required',
-            'estoqueProduto' => 'required',
+            'valor_unitario' => 'required',
+            'estoque' => 'required',
             
         ];
     }
@@ -37,8 +36,8 @@ class ProdutoRequest extends FormRequest
         return [
 
         'nome.required' => 'O campo nome é obrigatório.',
-        'valorProduto.required' => 'O campo Valor é obrigatório.',
-        'estoqueProduto.required' => 'O campo Estoque é obrigatório.',
+        'valor_unitario.required' => 'O campo Valor é obrigatório.',
+        'estoque.required' => 'O campo Estoque é obrigatório.',
         'avaliacaoProduto.required' => 'O campo Avaliação é importante.',
         'descricaoProduto.required' => 'O campo Descrição é importante.',
         ];

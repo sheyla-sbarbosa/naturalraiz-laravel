@@ -105,8 +105,8 @@
             <div class="col-sm-4">
                 <h3>Menu</h3>
                 <div class="nav-link text-center">
-                    <a href="#" class="nav-link text-dark item-action">PolÍtica de Privacidade</a>
-                    <a href="#" class="nav-link text-dark item-action">Ajuda</a>
+                    <a href="administracao" class="nav-link text-dark item-action">Área Administrativa</a>
+                    <a href="#" class="nav-link text-dark item-action">Política de Privacidade</a>
                     <a href="#" class="nav-link text-dark item-action">Troca e Devoluções</a>
                 </div>
             </div>

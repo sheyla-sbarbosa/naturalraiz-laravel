@@ -64,7 +64,7 @@ class ProdutoController extends Controller
         
         $produto = \App\Produto::find($produto);
         
-        $produto->delete();
+       $produto->delete();
 
         
         flash('Produto excluído com sucesso!')->success();
@@ -73,4 +73,4 @@ class ProdutoController extends Controller
 
     }
 
-}     
+}  
