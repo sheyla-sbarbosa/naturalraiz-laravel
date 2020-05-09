@@ -34,7 +34,7 @@
         <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active ">
-                    <a class="nav-link" style="color: white;" href="administracao">Home <span class="sr-only">(página atual)</span></a>
+                    <a class="nav-link" style="color: white;" href="home">Home <span class="sr-only">(página atual)</span></a>
                 </li> 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" style="color: white;" href="#" id="navbarDropdown" role="button"
@@ -42,7 +42,7 @@
                         Empresa
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Quem Somos</a>
+                        <a class="dropdown-item" href="/empresa">Quem Somos</a>
                        
                         <a class="dropdown-item" href="#">Ajuda</a>
                     </div>
@@ -53,22 +53,18 @@
                         Produto
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="/produto">Verdura</a>
-                        <a class="dropdown-item" href="/produto">Legumes</a>
-                        <a class="dropdown-item" href="/produto">Frutas</a>
-                        <a class="dropdown-item" href="/produto">Ervas/Chás</a>
-                        <a class="dropdown-item" href="/produtoproduto1.html">Temperos</a>
+                        <a class="dropdown-item" href="/verduras">Verduras e Legumes</a>
+                        <a class="dropdown-item" href="/frutas">Frutas</a>
+                        <a class="dropdown-item" href="/temperos">Temperos</a>
+                        <a class="dropdown-item" href="{{route ('administracao.create')}}">Adicionar Produtos</a>
+                        <a class="dropdown-item" href="{{route ('listagemproduto.index')}}">Listagem Produtos</a>
                     </div>
                 </li>
 
             </ul>
 
 
-            <a href="/produto">
-            <label class="btn btn-default" style="color:white;">
-                <img src="https://img.icons8.com/ios/26/ffffff/add-shopping-cart.png"/> Comprar                  
-            </a>
-            
+          
             </label>
             
 
@@ -80,16 +76,7 @@
             </label>
             
           
-            <label class="btn btn-default" style="color:white;">
-                <img src="https://img.icons8.com/ios/26/ffffff/login-rounded-right.png"/> Entrar
-            </label> 
-
-            <!-- linkar pagina de cadastro-->
-            <a href="/loginclient">
-            <label class="btn btn-default" style="color:white;">
-                <img src="https://img.icons8.com/ios/26/ffffff/login-rounded-right.png"/> Entrar
-                </a>
-            </label> 
+           
         </div>
     </nav>
 

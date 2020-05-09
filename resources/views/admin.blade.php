@@ -18,7 +18,7 @@
       
       <div class="container mt-5 mb-5">
         <h1>Adicionar Produtos</h1>
-        <form method="post" action="{{route ('produto.store')}}"">
+        <form method="post" action="{{route ('produto.store')}}">
           @csrf
           <div class="form-row">
             <div class="form-group col-md-6">
@@ -66,8 +66,8 @@
             
             
             <div class="form-group col-md-12">
-              <label for="descricaoProduto">Descrição</label>
-              <textarea class="form-control" name="descricaoProduto" id="descricaoProduto" rows="3"></textarea>
+              <label for="descricaoProduto" >Descrição</label>
+              <textarea class="form-control"  name="descricaoProduto" id="descricaoProduto" rows="3" ></textarea>
             </div>
             
             
@@ -84,14 +84,9 @@
 <div class="container mt-5 mb-5 ">
   <div class="form-row">
     <div class="col-md-4">
-      <button  type="submit" class="btn btn-primary btn-lg btn-block">Adicionar</button>
+      <button  type="submit" class="btn btn-success btn-lg btn-block">Adicionar</button>
     </div>
-    <div class="col-md-4">
-      <button  type="submit" class="btn btn-warning btn-lg btn-block">Editar</button>
-    </div>
-    <div class="col-md-4">
-      <button  type="submit" class="btn btn-danger btn-lg btn-block">Excluir</button>
-    </div>
+    
     
   </div>
 </div>

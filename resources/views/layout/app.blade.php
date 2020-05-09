@@ -37,7 +37,7 @@
         <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active ">
-                    <a class="nav-link" style="color: white;" href="administracao">Home <span class="sr-only">(página atual)</span></a>
+                    <a class="nav-link" style="color: white;" href="home">Home <span class="sr-only">(página atual)</span></a>
                 </li> 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" style="color: white;" href="#" id="navbarDropdown" role="button"
@@ -56,17 +56,18 @@
                         Produto
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="/produto">Verdura</a>
-                        <a class="dropdown-item" href="/produto">Legumes</a>
-                        <a class="dropdown-item" href="/produto">Frutas</a>
-                        <a class="dropdown-item" href="/produto">Ervas/Chás</a>
-                        <a class="dropdown-item" href="/produto">Temperos</a>
+                        <a class="dropdown-item" href="/verduras">Verduras e Legumes</a>
+                        <a class="dropdown-item" href="/frutas">Frutas</a>
+                        <a class="dropdown-item" href="/temperos">Temperos</a>
+                        <a class="dropdown-item" href="{{route ('administracao.create')}}">Adicionar Produtos</a>
+                        <a class="dropdown-item" href="{{route ('listagemproduto.index')}}">Listagem Produtos</a>
+                        
                     </div>
                 </li>
 
             </ul>
 <!-- linkar pagina de produtos-->
-<a href="produto">
+<a href="carrinho2">
             <label class="btn btn-default" style="color:white;">
                 <img src="https://img.icons8.com/ios/26/ffffff/add-shopping-cart.png"/> Comprar                  
             </a>
@@ -81,9 +82,9 @@
                 </a>
             </label>
              <!-- linkar pagina de cadastro-->
-             <a href="/loginclient">
+             <a href="/cadastroclient">
             <label class="btn btn-default" style="color:white;">
-                <img src="https://img.icons8.com/ios/26/ffffff/login-rounded-right.png"/> Entrar
+                <img src="https://img.icons8.com/ios/26/ffffff/login-rounded-right.png"/> Cadastrar
                 </a>
             </label> 
         </div>
@@ -94,8 +95,14 @@
             aria-label="Pesquisar">
         <button class="btn btn-outline-success my-2 my-md-0 my-sm-0 pesquisar" type="submit">Pesquisar</button>
     </form>
+       <div class = " container " >
 
-    </div><!-- final da navbar menu-->
+          @include ('flash::message')
+
+
+    </div>
+    
+    <!-- final da navbar menu-->
 
 
          @yield('conteudo')
@@ -153,6 +160,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+
+    
 </body>
 
 </html>
