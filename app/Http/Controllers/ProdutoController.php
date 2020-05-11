@@ -17,48 +17,60 @@ class ProdutoController extends Controller
 
         $produtos = \App\Produto::paginate(5) ;
 
-        return view('home', compact('produtos'));
+        return view('listagemproduto', compact('produtos'));
     }
 
-    public function verduras () 
-        { return view('verduras');
-
-    }
-
-    public function fruta () 
-        { return view('fruta');
-
-    }
-
-    public function legume () 
-        { return view('legume');
-
-    }
-
-    public function tempero () 
-        { return view('tempero');
-
-    }
-
-    public  function store(ProdutoRequest $request) {
-    $novoproduto = new Produto();
-    $novoProduto -> nomeProduto = $request-> nome;
-    $novoProduto -> valor_unitario= $request-> valor;
-    $novoProduto -> estoqueProduto = $request-> estoque;
-    $novoProduto -> avaliacaoProduto = $request-> avaliacaoProduto;
-    $novoProduto -> descricaoProduto = $request-> comentarios;
-    $novoProduto ->save();
     
-   
+
+    public function create() {
+        return view('admin');
+    }
+
+    public function store(Request $request) {
+      $data = $request->all();
+      $novoproduto = new Produto();
+      $novoproduto-> fill($data)->save();
+
+      flash('Produto cadastrado com sucesso!')->success();
+
+         return redirect('listagemproduto');
+
+    }
+
+    public function edit($produto) {
 
         $produto = \App\Produto::find($produto);
 
-        return view('editarproduto', compact('produto'));
+        
+        
+      return view('editarproduto', compact('produto'));
     }
 
     public function update(Request $request, $produto) {
 
+        $data = ($request -> all());
+
+        $produto = \App\Produto::find($produto);
+
+        $produto -> update($data);
+
+        flash('Produto alterado com sucesso!')->success();
+
+         return redirect('listagemproduto');
       
     }
 
-}     
+    public function destroy($produto) {
+        
+        $produto = \App\Produto::find($produto);
+        
+       $produto->delete();
+
+        
+        flash('Produto excluído com sucesso!')->success();
+
+         return redirect('listagemproduto');
+
+    }
+
+}  

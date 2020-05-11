@@ -73,10 +73,13 @@
             @foreach($produtos as $produto)
             <div class="col-sm-6 col-md-3 col-lg-3">
                 <div class="card">
-                    <img class="card-img-top" src="img/produtorepolho.jpg" alt="abacate">
+                    <img class="card-img-top" src="img/produtorepolho.jpg" alt="abacate" height="200px;">
                     <div class="card-deck">
                         <div class="card-body text-center">
-                            <h4 class="card-title text-success">{{ $produto -> nome}}</h4>
+                            <a href="{{route ('home.index', [$produto->id])}}">
+                                
+                                <h4 class="card-title text-success">{{ $produto -> nome}}</h4>
+                            </a>
                             <h5 class="card-subtitle mb-4 text-success">R$ {{ $produto  -> valor_unitario}} un</h5>
                             <img class="btn btn-default"
                             src="https://img.icons8.com/ios/40/000000/shopping-cart-with-money.png">
@@ -122,13 +125,13 @@
             </div>
             <div class="col-sm-6 col-md-3 col-lg-3">
                 <div class="card">
-                    <img class="card-img-top" src="img/homemorango.jpg" alt="abacate">
+                    <img class="card-img-top " src="img/pitaya.jpg" alt="pitaya" height="200px;">
                     <div class="card-deck">
                         <div class="card-body text-center">
-                            <h4 class="card-title text-success">Morangos</h4>
+                            <h4 class="card-title text-success">Pitaya</h4>                            
                             <h5 class="card-subtitle mb-4 text-success">R$ 2,50 un</h5>
                             <img class="btn btn-default"
-                            src="https://img.icons8.com/ios/40/000000/shopping-cart-with-money.png">
+                                src="https://img.icons8.com/ios/40/000000/shopping-cart-with-money.png">
                             <img class="btn btn-default" src="https://img.icons8.com/ios/20/000000/plus.png">
                             <img class="btn btn-default" src="https://img.icons8.com/ios/20/000000/minus.png">
                             <img class="btn btn-default" src="https://img.icons8.com/ios/40/000000/like.png">
@@ -136,6 +139,7 @@
                     </div>
                 </div>
             </div>
+            
         </div>
         <div class="row mb-4">
             <div class="col-sm-6 col-md-3 col-lg-3">

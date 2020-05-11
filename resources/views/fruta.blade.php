@@ -26,7 +26,11 @@
                             </div>
                         <h6>Estoque: produto disponível</h6>
                         <p class="price-detail-wrap"><span class="price h3 text-warning">
+<<<<<<< HEAD
+                                <span class="currency">R$ </span><span class="num">2,50</span>
+=======
                                 <span class="currency">R$ </span><span class="num">4,50</span>
+>>>>>>> 450f365a949dc0158bf8463a859982ffd4c21d6f
                             </span>
                             <span> kg</span>
                         </p>

@@ -1,92 +1,156 @@
-@extends('layout.app')
+@extends('layout.inside')
 
 @section('conteudo')
 
-    
-    <div class="container" style="margin-top: 80px; margin-bottom: 80px;">
-        <div class="card">
-            <div class="row">
-                <aside class="col-sm-5">
-                    <article class="gallery-wrap">
-                        <div class="img-big-wrap">
-                            <div> <a href="#"><img src="/img/produtoblocolis.jpg"></a></div>
+    <!-- inicio dos cards-->
+    <div class="container mt-5" >
+        <div class="titulo text-center display-5">
+            <h4 class="display-4"> Verduras e Legumes </h4>
+            <p> Das mais diversas roças pertinho de você.</p>
+        </div>
+        <div class="row mb-4">
+            <div class="col-sm-6 col-md-3 col-lg-3">
+                <div class="card">
+                    <img class="card-img-top" src="img/produtorepolho.jpg" alt="abacate">
+                    <div class="card-deck">
+                        <div class="card-body text-center">
+                            <h4 class="card-title text-success">Repolho Roxo</h4>
+                            <h5 class="card-subtitle mb-4 text-success">R$ 2,50 un</h5>
+                            <img class="btn btn-default"
+                                src="https://img.icons8.com/ios/40/000000/shopping-cart-with-money.png">
+                            <img class="btn btn-default" src="https://img.icons8.com/ios/20/000000/plus.png">
+                            <img class="btn btn-default" src="https://img.icons8.com/ios/20/000000/minus.png">
+                            <img class="btn btn-default" src="https://img.icons8.com/ios/40/000000/like.png">
                         </div>
-                    </article>
-                </aside>
-                <aside class="col-sm-7">
-                    <article class="card-body p-5">
-                        <h4>Brócolis</h4>
-                        <div class="rating-review">
-                            <div class="pro-dec-rating mb-3">
-                                <img src="https://img.icons8.com/material/18/000000/filled-star--v2.png"/>
-                                <img src="https://img.icons8.com/material/18/000000/filled-star--v2.png"/>
-                                <img src="https://img.icons8.com/material/18/000000/filled-star--v2.png"/>
-                                <img src="https://img.icons8.com/material/18/000000/filled-star--v2.png"/>
-                                <img src="https://img.icons8.com/material/18/000000/filled-star--v2.png"/>
-                            </div>
-                        <h6>Estoque: produto disponível</h6>
-                        <p class="price-detail-wrap"><span class="price h3 text-warning">
-                                <span class="currency">R$ </span><span class="num">4,50</span>
-                            </span>
-                            <span> kg</span>
-                        </p>
-                        <dl class="propriedade-item">
-                            <dt>Informação:</dt>
-                            <dd>
-                                <p> Entre os benefícios para a saúde associados ao consumo desse alimento, estão: proteger o coração, melhorar o funcionamento do intestino e até fortalecer a imunidade. </p>
-                            </dd>
-                        </dl>
-                        <dl class="param param-feature">
-                            <dt>Código</dt>
-                            <dd>4321</dd>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3 col-lg-3">
+                <div class="card">
+                    <img class="card-img-top " src="img/homebrocolis.jpg" alt="brocolis">
+                    <div class="card-deck">
+                        <div class="card-body text-center">
+                            <a href="/verdura">
+                                <h4 class="card-title text-success">Brocolis</h4>                            
 
-                            <hr>
-                            <div class="row" >
-                                <div class="col-sm-4" >
-                                    <dl class="param param-inline">
-                                        <dt>Quantidade </dt>
-                                        <dd>
-                                            <select class="form-control form-control-sm" style="width:70px;">
-                                                <option> 1kg </option>
-                                                <option> 2kg </option>
-                                                <option> 3kg </option>
-                                                <option> 4kg </option>
-                                                <option> 5kg </option>
-                                                <option> 6kg </option>
-                                            </select>
-                                        </dd>
-                                    </dl>
-                                    
-                                </div>
-                                <div class="col-sm-4" >
-                                    <dl class="param param-inline">
-                                        <dt>(Ou) Unidades </dt>
-                                        <dd>
-                                            <select class="form-control form-control-sm" style="width:70px;">
-                                                <option> 1 </option>
-                                                <option> 2 </option>
-                                                <option> 3 </option>
-                                                <option> 4 </option>
-                                                <option> 5 </option>
-                                                <option> 6 </option>
-                                            </select>
-                                        </dd>
-                                    </dl>
-                                    
-                                </div>
-                                <hr>
-                                <a href="/carrinho2" class="btn btn-outline-success btn d-inline-block"
-                                    style="height: 40px;">Adicionar</a>
-                    </article>
-                </aside>
+                            </a>
+                            <h5 class="card-subtitle mb-4 text-success">R$ 2,50 un</h5>
+                            <img class="btn btn-default"
+                                src="https://img.icons8.com/ios/40/000000/shopping-cart-with-money.png">
+                            <img class="btn btn-default" src="https://img.icons8.com/ios/20/000000/plus.png">
+                            <img class="btn btn-default" src="https://img.icons8.com/ios/20/000000/minus.png">
+                            <img class="btn btn-default" src="https://img.icons8.com/ios/40/000000/like.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3 col-lg-3">
+                <div class="card">
+                    <img class="card-img-top" src="img/pepino.jpg" alt="Pepino" height="200px;">
+                    <div class="card-deck">
+                        <div class="card-body text-center">
+                            <h4 class="card-title text-success">Pepino</h4> 
+                            <h5 class="card-subtitle mb-4 text-success">R$ 2,50 un</h5>
+                            <img class="btn btn-default"
+                                src="https://img.icons8.com/ios/40/000000/shopping-cart-with-money.png">
+                            <img class="btn btn-default" src="https://img.icons8.com/ios/20/000000/plus.png">
+                            <img class="btn btn-default" src="https://img.icons8.com/ios/20/000000/minus.png">
+                            <img class="btn btn-default" src="https://img.icons8.com/ios/40/000000/like.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3 col-lg-3">
+                <div class="card">
+                    <img class="card-img-top" src="img/espinafre.jpg" alt="abacate" height="200px;">
+                    <div class="card-deck">
+                        <div class="card-body text-center">
+                            <h4 class="card-title text-success">Espinafre</h4>
+                            <h5 class="card-subtitle mb-4 text-success">R$ 2,50 un</h5>
+                            <img class="btn btn-default"
+                                src="https://img.icons8.com/ios/40/000000/shopping-cart-with-money.png">
+                            <img class="btn btn-default" src="https://img.icons8.com/ios/20/000000/plus.png">
+                            <img class="btn btn-default" src="https://img.icons8.com/ios/20/000000/minus.png">
+                            <img class="btn btn-default" src="https://img.icons8.com/ios/40/000000/like.png">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-
-
+        <div class="row mb-4">
+            <div class="col-sm-6 col-md-3 col-lg-3">
+                <div class="card">
+                    <img class="card-img-top" src="img/homecenoura.jpg" alt="cenoura">
+                    <div class="card-deck">
+                        <div class="card-body text-center">
+                            <h4 class="card-title text-success">Cenoura</h4>
+                            <h5 class="card-subtitle mb-4 text-success">R$ 2,50 un</h5>
+                            <img class="btn btn-default"
+                                src="https://img.icons8.com/ios/40/000000/shopping-cart-with-money.png">
+                            <img class="btn btn-default" src="https://img.icons8.com/ios/20/000000/plus.png">
+                            <img class="btn btn-default" src="https://img.icons8.com/ios/20/000000/minus.png">
+                            <img class="btn btn-default" src="https://img.icons8.com/ios/40/000000/like.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3 col-lg-3">
+                <div class="card">
+                    <img class="card-img-top" src="img/couve.jpg" alt="couve" height="200px;">
+                    <div class="card-deck">
+                        <div class="card-body text-center">
+                            <h4 class="card-title text-success">Couve Rabano</h4>
+                            <h5 class="card-subtitle mb-4 text-success">R$ 2,50 un</h5>
+                            <img class="btn btn-default"
+                                src="https://img.icons8.com/ios/40/000000/shopping-cart-with-money.png">
+                            <img class="btn btn-default" src="https://img.icons8.com/ios/20/000000/plus.png">
+                            <img class="btn btn-default" src="https://img.icons8.com/ios/20/000000/minus.png">
+                            <img class="btn btn-default" src="https://img.icons8.com/ios/40/000000/like.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3 col-lg-3">
+                <div class="card">
+                    <img class="card-img-top" src="img/homealho.jpg" alt="abacate">
+                    <div class="card-deck">
+                        <div class="card-body text-center">
+                            <h4 class="card-title text-success">Alho</h4>
+                            <h5 class="card-subtitle mb-4 text-success">R$ 2,50 un</h5>
+                            <img class="btn btn-default"
+                                src="https://img.icons8.com/ios/40/000000/shopping-cart-with-money.png">
+                            <img class="btn btn-default" src="https://img.icons8.com/ios/20/000000/plus.png">
+                            <img class="btn btn-default" src="https://img.icons8.com/ios/20/000000/minus.png">
+                            <img class="btn btn-default" src="https://img.icons8.com/ios/40/000000/like.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3 col-lg-3">
+                <div class="card">
+                    <img class="card-img-top" src="img/homecebola.jpg" alt="cebola">
+                    <div class="card-deck">
+                        <div class="card-body text-center">
+                            <h4 class="card-title text-success">Cebola</h4>
+                            <h5 class="card-subtitle mb-4 text-success">R$ 2,50 un</h5>
+                            <img class="btn btn-default"
+                                src="https://img.icons8.com/ios/40/000000/shopping-cart-with-money.png">
+                            <img class="btn btn-default" src="https://img.icons8.com/ios/20/000000/plus.png">
+                            <img class="btn btn-default" src="https://img.icons8.com/ios/20/000000/minus.png">
+                            <img class="btn btn-default" src="https://img.icons8.com/ios/40/000000/like.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- final dos cards-->
+        
     </div>
-    <br>
-    <br>
-   
+    </div> <!-- fim container-->
+
     
+    </div>
+    </div>
+    </div>
+    </div>
 
 @endsection

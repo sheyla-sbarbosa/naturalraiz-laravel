@@ -4,18 +4,18 @@
 
     
     <div class="container" style="margin-top: 80px; margin-bottom: 80px;">
-        <div class="card">
+        <div class="card ml-2">
             <div class="row">
                 <aside class="col-sm-5">
                     <article class="gallery-wrap">
                         <div class="img-big-wrap">
-                            <div> <a href="#"><img src="/img/produtopimenta.jpg"></a></div>
+                            <div> <a href="#"><img  class=" img-fluid "  src="/img/acafrao.jpg"></a></div>
                         </div>
                     </article>
                 </aside>
                 <aside class="col-sm-7">
                     <article class="card-body p-5">
-                        <h4>Pimenta Dedo de Moça </h4>
+                        <h4>Açafrão </h4>
                         <div class="rating-review">
                             <div class="pro-dec-rating mb-3">
                                 <img src="https://img.icons8.com/material/18/000000/filled-star--v2.png"/>
@@ -33,7 +33,7 @@
                         <dl class="propriedade-item">
                             <dt>Informação:</dt>
                             <dd>
-                                <p> As pimentas fazem muito bem para o organismo, sendo benéficas até mesmo na prevenção contra o câncer. Por isso, pequenas doses diárias são fundamentais para manter o bom funcionamento do organismo e ainda agir na prevenção de doenças. </p>
+                                <p> Benefícios nutricionais: os componentes que dão sua tonalidade marcante, as curcuminas, têm potencial antioxidante e anti-inflamatório. A raiz ainda tem a capacidade de diminuir o colesterol ruim e aumentar o bom, enquanto auxilia o combate ao estresse e à insônia, e na melhora da memória, devido às suas funções de controle da serotonina </p>
                             </dd>
                         </dl>
                         <dl class="param param-feature">

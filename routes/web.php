@@ -13,33 +13,60 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/* rota home */
-Route::get('/','HomeController@index');
 /*rota empresa */
 Route::get('empresa','EmpresaController@index');
-
+Route::get('home', 'HomeController@index')->name('home.index');
 /* rota produto */
-Route::get('produto', 'ProdutoController@index');
-Route::post('produto', 'ProdutoController@store')->name('produto.store');
-route::get('verduras', 'ProdutoController@verduras');
-route::get('fruta', 'ProdutoController@fruta');
-route::get('legume', 'ProdutoController@legume');
-route::get('tempero', 'ProdutoController@tempero');
-Route::get('home', 'ProdutoController@index'); //mostra os produtos na home
-Route::get('administracao', 'ProdutoController@create'); //mostra criar produto
+Route::get('listagemproduto', 'ProdutoController@index')->name('listagemproduto.index'); //mostra os produtos na home
+Route::get('administracao', 'ProdutoController@create')->name('administracao.create');
 Route::post('produto/store', 'ProdutoController@store')->name('produto.store'); //recebe o produto
-Route::get('/{produto}/edit', 'ProdutoController@edit') ->name('produto.edit'); 
-Route::post('/{produto}/update', 'ProdutoController@update');
+Route::get('{produto}/edit', 'ProdutoController@edit') ->name('produto.edit'); 
+Route::post('{produto}/update', 'ProdutoController@update')->name('produto.update');
+Route::get('{produto}/destroy', 'ProdutoController@destroy')->name('produto.destroy');
 
 /*Rotas para cadastro de clientes*/
 Route::get('/cadastroclient', 'UserController@create');
 Route::post('/cadastroclient', 'UserController@store')->name('user.store');
 
+Route::get('/fruta', function() {
+    return view('fruta');
+});
+
+Route::get('/frutas', function() {
+    return view('frutas');
+});
+
+
+Route::get('/legume', function() {
+    return view('legume');
+});
+
+Route::get('/tempero', function() {
+    return view('tempero');
+});
+
+Route::get('/temperos', function() {
+    return view('temperos');
+});
+
+
+Route::get('/verdura', function() {
+    return view('verdura');
+});
+
+Route::get('/verduras', function() {
+    return view('verduras');
+});
+
+
+Route::get('/cha', function() {
+    return view('cha');
+});
 
 /*rotas de login*/
 
-route::get('/loginclient', 'UserController@loginClient');
-route::get('/administracao1', 'AdminController@admin');
+Route::get('/loginclient', 'UserController@loginClient');
+Route::get('/administracao1', 'AdminController@admin');
 
 //Route::auth();
 
